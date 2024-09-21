@@ -22,32 +22,32 @@ function Home2() {
               <i>
                 <b className="purple">Hiba Kandaoui , </b>
               </i>
-              a full stack web developer , competent in front-end and back-end technologies,
+              a full stack web developer skilled in both front-end and back-end technologies.
               <br />
               <br />
-              creation of creative sites and web applications.  &nbsp;
+              I specialize in creating innovative websites and web applications.  &nbsp;
               <i>
-                <b className="purple">Welcome to my world of coding 💻 </b> and 
+                <b className="purple"> Welcome to my world of coding 💻 </b> and 
                 creativity! 🎨
               </i>
               <br />
               <br />
               Proficient in languages such
                as <b className="purple">JavaScript, Php, Python </b> 
-               I specialize in both 
-              <i>
+               I excel in both 
+              <i> 
                 <b className="purple">
                   {" "}
                   front-end and back-end
                 </b>
                  
               </i> development .
-              &nbsp; developing powerful server-side applications,
-              or working with frameworks like
+              &nbsp;  Whether building dynamic server-side applications or working with frameworks like 
               <b className="purple">
                   {" "}
-                  Laravel .
+                  Laravel and React.
                 </b> 
+                I'm passionate about bringing ideas to life through code.
             </p>
           </Col>
 
@@ -66,7 +66,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/Hiba7898"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -75,34 +75,34 @@ function Home2() {
                 </a>
               </li>
               <li className="social-icons">
-                <a
+                {/* <a
                   href="https://twitter.com/Soumyajit4419"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
                   <AiOutlineTwitter />
-                </a>
+                </a> */}
               </li>
               <li className="social-icons">
-                <a
+                {/* <a
                   href="https://www.linkedin.com/in/soumyajit4419/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
                   <FaLinkedinIn />
-                </a>
+                </a> */}
               </li>
               <li className="social-icons">
-                <a
+                {/* <a
                   href="https://www.instagram.com/soumyajit4419"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
-                </a>
+                </a> */}
               </li>
             </ul>
           </Col>
