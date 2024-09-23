@@ -75,34 +75,34 @@ function Home2() {
                 </a>
               </li>
               <li className="social-icons">
-                {/* <a
-                  href="https://twitter.com/Soumyajit4419"
+                <a
+                  href="https://github.com/Hiba7898"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
                   <AiOutlineTwitter />
-                </a> */}
+                </a>
               </li>
               <li className="social-icons">
-                {/* <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                <a
+                  href="https://github.com/Hiba7898"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
                   <FaLinkedinIn />
-                </a> */}
+                </a>
               </li>
               <li className="social-icons">
-                {/* <a
-                  href="https://www.instagram.com/soumyajit4419"
+                <a
+                  href="https://github.com/Hiba7898"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
-                </a> */}
+                </a>
               </li>
             </ul>
           </Col>
