@@ -3,21 +3,15 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
 import { ImPhone } from "react-icons/im";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-
 import {  Dropdown } from "react-bootstrap";
-
-
 
 
 function NavBar() {
@@ -118,7 +112,7 @@ function NavBar() {
     <Dropdown.Menu>
       <Dropdown.Item href="#/action-ar">Arabic</Dropdown.Item>
       <Dropdown.Item href="#/action-fr">French</Dropdown.Item>
-      <Dropdown.Item href="#/action-en">English</Dropdown.Item>
+      <Dropdown.Item href="#/action-en">English</Dropdown.Item> 
     </Dropdown.Menu>
   </Dropdown>
 </Nav.Item>

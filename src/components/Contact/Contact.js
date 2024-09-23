@@ -14,8 +14,6 @@ function Contact() {
             <Col md={7} className="home-header">
             <h5>Contact us</h5>
    			<h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>I'd Love <strong className="purple">To Hear From You.</strong></h1>
-
-            
             </Col>
           </Row>
         </Container>
