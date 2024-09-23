@@ -6,15 +6,19 @@ import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
+import { ImPhone } from "react-icons/im";
 import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
+
+import {  Dropdown } from "react-bootstrap";
+
+
+
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -98,20 +102,27 @@ function NavBar() {
                 to="/contact"
                 onClick={() => updateExpanded(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Contact
+                <ImPhone style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/Hiba7898"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
-            </Nav.Item>
+
+
+  {/* Language Selection Dropdown */}
+  <Dropdown className="ml-2">
+    <Dropdown.Toggle variant="primary" id="dropdown-basic">
+      Language
+    </Dropdown.Toggle>
+
+    <Dropdown.Menu>
+      <Dropdown.Item href="#/action-ar">Arabic</Dropdown.Item>
+      <Dropdown.Item href="#/action-fr">French</Dropdown.Item>
+      <Dropdown.Item href="#/action-en">English</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>
+</Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
