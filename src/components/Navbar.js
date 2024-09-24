@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import { Link } from "react-router-dom";
-import { ImPhone } from "react-icons/im";
+import { AiOutlineMail } from "react-icons/ai"; // Icône de l'email
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -12,6 +12,9 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import {  Dropdown } from "react-bootstrap";
+import usFlag from "../Assets/us_flag.jpg"; // Importez vos images de drapeaux
+import frFlag from "../Assets/fr_flag.jpg"; 
+import arFlag from "../Assets/ar_flag.jpg"; 
 
 
 function NavBar() {
@@ -91,31 +94,52 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-            <Nav.Link
-                as={Link}
-                to="/contact"
-                onClick={() => updateExpanded(false)}
-              >
-                <ImPhone style={{ marginBottom: "2px" }} /> Contact
+              {/* Ajout du bouton d'email */}
+              <Nav.Link href="mailto:hibakandaoui083@gmail.com" style={{ marginRight: "10px" }}>
+                <AiOutlineMail style={{ color: "white", fontSize: "1.5em" }} />
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
+            <Nav.Item>
+              {/* Language Selection Dropdown */}
+              <Dropdown className="ml-2">
+                <Dropdown.Toggle variant="primary" id="dropdown-basic"> 
+                  <img
+                    src={usFlag}
+                    alt="English"
+                    style={{ width: "20px", marginRight: "5px" }}
+                  />{" "}
+                  EN
+                </Dropdown.Toggle>
 
-
-  {/* Language Selection Dropdown */}
-  <Dropdown className="ml-2">
-    <Dropdown.Toggle variant="primary" id="dropdown-basic">
-      Language
-    </Dropdown.Toggle>
-
-    <Dropdown.Menu>
-      <Dropdown.Item href="#/action-ar">Arabic</Dropdown.Item>
-      <Dropdown.Item href="#/action-fr">French</Dropdown.Item>
-      <Dropdown.Item href="#/action-en">English</Dropdown.Item> 
-    </Dropdown.Menu>
-  </Dropdown>
-</Nav.Item>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-en">
+                    <img
+                      src={usFlag}
+                      alt="English"
+                      style={{ width: "20px", marginRight: "5px" }}
+                    />{" "}
+                    EN
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-fr">
+                    <img
+                      src={frFlag}
+                      alt="French"
+                      style={{ width: "20px", marginRight: "5px" }}
+                    />{" "}
+                    FR
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#/action-ar">
+                    <img
+                      src={arFlag}
+                      alt="Arabic"
+                      style={{ width: "20px", marginRight: "5px" }}
+                    />{" "}
+                    AR
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </Nav.Item>
 
           </Nav>
         </Navbar.Collapse>
