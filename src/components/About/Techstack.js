@@ -6,7 +6,6 @@ import {
   DiNodejs,
   DiMysql,
   DiMsqlServer,
-  DiMongodb,
   DiPython,
   DiGit,
   DiPhp,
@@ -24,9 +23,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiMysql />

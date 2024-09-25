@@ -88,6 +88,9 @@ button:focus {
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
 }
+.ml-2 {
+  margin-top: 12px;
+}
 
 .navbar-toggler {
   position: relative !important;
