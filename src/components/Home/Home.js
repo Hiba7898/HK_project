@@ -4,8 +4,10 @@ import homeLogo from "../../Assets/homeimg.png";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation();
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -14,15 +16,15 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+                 {t('Welcome')}{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> Hiba kandaoui</strong>
+              {t('im')}
+                <strong className="main-name"> {t('nam')}</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>

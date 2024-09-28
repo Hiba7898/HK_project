@@ -12,9 +12,12 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import {  Dropdown } from "react-bootstrap";
-import usFlag from "../Assets/us_flag.jpg"; // Importez vos images de drapeaux
-import frFlag from "../Assets/fr_flag.jpg"; 
-import arFlag from "../Assets/ar_flag.jpg"; 
+import usFlag from "../Assets/us_flag.png"; // Importez vos images de drapeaux
+import frFlag from "../Assets/fr_flag.png"; 
+import arFlag from "../Assets/ar_flag.png"; 
+import { changeLanguage } from "i18next";
+import { useTransition } from "react";
+import { useTranslation } from "react-i18next";
 
 
 function NavBar() {
@@ -30,7 +33,21 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+  const Languages = [
+    {code: "en", lang: "English" , src:usFlag},
+    {code: "fr", lang: "French" , src:frFlag},
+    {code: "ar", lang: "Arabi" , src:arFlag},
+  ];
+  const [selectedLanguage, setSelectedLanguage] = useState("Language");
+  const {i18n} = useTranslation();
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng.code);
+    setSelectedLanguage(       <>
+      <img src={lng.src} alt={lng.lang} style={{ width: "20px", marginRight: "5px" }} />
+      {lng.lang}
+    </>);
+  };
   return (
     <Navbar
       expanded={expand}
@@ -76,6 +93,7 @@ function NavBar() {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -102,42 +120,23 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              {/* Language Selection Dropdown */}
+
               <Dropdown className="ml-2">
-                <Dropdown.Toggle variant="primary" id="dropdown-basic"> 
-                  <img
-                    src={usFlag}
-                    alt="English"
-                    style={{ width: "20px", marginRight: "5px" }}
-                  />{" "}
-                  EN
+                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                  {selectedLanguage} 
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-en">
-                    <img
-                      src={usFlag}
-                      alt="English"
-                      style={{ width: "20px", marginRight: "5px" }}
-                    />{" "}
-                    EN
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-fr">
-                    <img
-                      src={frFlag}
-                      alt="French"
-                      style={{ width: "20px", marginRight: "5px" }}
-                    />{" "}
-                    FR
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-ar">
-                    <img
-                      src={arFlag}
-                      alt="Arabic"
-                      style={{ width: "20px", marginRight: "5px" }}
-                    />{" "}
-                    AR
-                  </Dropdown.Item>
+                  {
+                    Languages.map((lng)=>{
+                      return(
+                          <Dropdown.Item className={lng.code === i18n.language ? "selected" : ""} key={lng.code} onClick={() => changeLanguage(lng)} >
+                            <img src={lng.src} alt="French" style={{ width: "20px", marginRight: "5px" }}/>
+                            {lng.lang}
+                          </Dropdown.Item>
+                      );              
+                    })
+                  }
                 </Dropdown.Menu>
               </Dropdown>
             </Nav.Item>
