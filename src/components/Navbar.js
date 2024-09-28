@@ -14,7 +14,6 @@ import { CgFileDocument } from "react-icons/cg";
 import {  Dropdown } from "react-bootstrap";
 import usFlag from "../Assets/us_flag.png"; // Importez vos images de drapeaux
 import frFlag from "../Assets/fr_flag.png"; 
-import arFlag from "../Assets/ar_flag.png"; 
 import { changeLanguage } from "i18next";
 import { useTransition } from "react";
 import { useTranslation } from "react-i18next";
@@ -36,7 +35,6 @@ function NavBar() {
   const Languages = [
     {code: "en", lang: "English" , src:usFlag},
     {code: "fr", lang: "French" , src:frFlag},
-    {code: "ar", lang: "Arabi" , src:arFlag},
   ];
   const [selectedLanguage, setSelectedLanguage] = useState("Language");
   const {i18n} = useTranslation();
