@@ -16,10 +16,12 @@ import usFlag from "../Assets/us_flag.png"; // Importez vos images de drapeaux
 import frFlag from "../Assets/fr_flag.png"; 
 import { changeLanguage } from "i18next";
 import { useTransition } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
+
 
 
 function NavBar() {
+  const { t } = useTranslation();
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -72,7 +74,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t('Home')}
               </Nav.Link>
             </Nav.Item>
 
@@ -82,7 +84,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} />{t('About')}
               </Nav.Link>
             </Nav.Item>
 
@@ -96,7 +98,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                {t('Projects')}
               </Nav.Link>
             </Nav.Item>
 
@@ -106,7 +108,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} />  {t('Resume')}
               </Nav.Link>
             </Nav.Item>
 

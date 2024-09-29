@@ -8,46 +8,51 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 function Home2() {
+  const { t } = useTranslation();
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+               {t('LET ME')}<span className="purple"> {t('INTRODUCE')} </span> {t('MYSELF')} 
             </h1>
             <p className="home-about-body">
               <i>
-                <b className="purple">Hiba Kandaoui , </b>
+                <b className="purple"> {t('Hiba Kandaoui')}</b>
               </i>
-              a full stack web developer skilled in both front-end and back-end technologies.
+              {t('dv web')}
+
+
+
               <br />
               <br />
-              I specialize in creating innovative websites and web applications.  &nbsp;
+              {t('dv web2')}  &nbsp;
               <i>
-                <b className="purple"> Welcome to my world of coding 💻 </b> and 
-                creativity! 🎨
+                <b className="purple">{t('dv web3')}  </b>  {t('dv web4')} 
+                
               </i>
               <br />
               <br />
-              Proficient in languages such
-               as <b className="purple">JavaScript, Php, Python </b> 
-               I excel in both 
+               {t('dv web5')} 
+                <b className="purple">{t('dv web6')} </b> 
+                {t('dv web7')} 
               <i> 
                 <b className="purple">
                   {" "}
-                  front-end and back-end
+                  {t('dv web8')} 
                 </b>
                  
-              </i> development .
-              &nbsp;  Whether building dynamic server-side applications or working with frameworks like 
+              </i> {t('dv web9')} 
+              &nbsp;{t('dv web10')}    
               <b className="purple">
                   {" "}
-                  Laravel and React.
+                  {t('dv web11')}  
                 </b> 
-                I'm passionate about bringing ideas to life through code.
+                {t('dv web12')}  
             </p>
           </Col>
 
@@ -59,9 +64,9 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
+            <h1>{t('FIND ME ON')}  </h1>
             <p>
-              Feel free to <span className="purple">connect </span>with me
+               {t('Feel free to')}<span className="purple"> {t('connect')}</span> {t('with me')}
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">

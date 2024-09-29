@@ -6,18 +6,20 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
   let date = new Date();
   let year = date.getFullYear();
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Developed by Hiba kandaoui</h3>
+          <h3>{t('Developed by Hiba kandaoui')}</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} , ❤️ by Hiba Kandaoui for a better web</h3>
+          <h3>Copyright © {year} , ❤️ {t('kandaoui')}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
