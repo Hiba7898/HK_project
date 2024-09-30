@@ -113,10 +113,14 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              {/* Ajout du bouton d'email */}
-              <Nav.Link href="mailto:hibakandaoui083@gmail.com" style={{ marginRight: "10px" }}>
+            <Nav.Link
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hibakandaoui083@gmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ marginRight: "10px" }}
+              >
                 <AiOutlineMail style={{ color: "white", fontSize: "1.5em" }} />
-              </Nav.Link>
+                </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
