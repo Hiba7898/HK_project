@@ -63,6 +63,7 @@ i18n
           "AboutCode2": "I'm excited to continue exploring new technologies, honing my skills, and contributing to projects that inspire, engage, and make a difference.",
           "Days I":"Days I",
           "Code": "Code",
+          "Download CV" : "Download CV",
         }
       },
       fr: {
@@ -119,6 +120,7 @@ i18n
           "AboutCode2": "Je suis impatient de continuer à explorer de nouvelles technologies, à affiner mes compétences et à contribuer à des projets qui inspirent, engagent et font la différence.",
           "Days I":"code",
           "Code": "du jour",
+          "Download CV" : "Installé CV",
 
         }
       },

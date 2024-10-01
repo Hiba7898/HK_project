@@ -5,11 +5,14 @@ import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/Hiba_Kandaoui.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+import { useTranslation } from 'react-i18next';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
+
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -27,7 +30,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;{t('Download CV')}
           </Button>
         </Row>
 
@@ -45,7 +48,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;{t('Download CV')}
           </Button>
         </Row>
       </Container>
