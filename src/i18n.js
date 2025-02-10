@@ -102,7 +102,7 @@ i18n
           "Developed by Hiba kandaoui":"Développé par Hiba kandaoui",
           "kandaoui": "par Hiba Kandaoui pour un meilleur web",
           "Know Who" : "sachez qui",
-          "Im": "je suis",
+          "IM": "je suis",
           "Professional" : "Skillset", 
           "Skillset":"Professionnel",
           "Tools":"Outils",

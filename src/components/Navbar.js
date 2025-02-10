@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo-remove.png";
+import logo from "../Assets/2-removebg-preview.png";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai"; // Icône de l'email
 import {
