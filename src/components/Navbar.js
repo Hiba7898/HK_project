@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo_HK_final.png";
+import logo from "../Assets/hiba_kandaoui.png";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai"; // Icône de l'email
 import {
