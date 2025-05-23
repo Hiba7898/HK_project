@@ -13,7 +13,30 @@ html {
 
   --imp-text-color: #c770f0;
 }
+/* ضع هذا في بداية CSS ديالك */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
 
+body {
+    background: linear-gradient(135deg, #0c0513 0%, #1a0e2e 25%, #2d1950 50%, #16213e 75%, #0c0c0c 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* امسح أو علق على background-image في sections ديالك */
+.home-section,
+.about-section, 
+.project-section,
+.resume-section {
+    background: linear-gradient(135deg, #0c0513 0%, #1a0e2e 25%, #2d1950 50%, #16213e 75%, #0c0c0c 100%);
+    backdrop-filter: blur(1px) !important;
+}
 .purple {
   color: var(--imp-text-color) !important;
 }
@@ -72,9 +95,88 @@ button:focus {
   border-radius: 12px;
 }
 
+
 /* --------- */
 /* Navbar Section  */
 /* --------- */
+
+        /* Enhanced Navbar */
+        .navbar {
+            position: fixed !important;
+            top: 0;
+            width: 100%;
+            padding: 0.8rem 2rem !important;
+            background: rgba(27, 26, 46, 0.15) !important;
+            backdrop-filter: blur(25px) !important;
+            -webkit-backdrop-filter: blur(25px) !important;
+            border-bottom: 1px solid rgba(199, 112, 240, 0.2) !important;
+            transition: all 0.3s ease !important;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .navbar.scrolled {
+            background: rgba(12, 5, 19, 0.95) !important;
+            backdrop-filter: blur(30px) !important;
+            border-bottom: 1px solid rgba(199, 112, 240, 0.4) !important;
+            box-shadow: 0 8px 32px rgba(199, 112, 240, 0.1) !important;
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            font-size: 1.8rem !important;
+            text-decoration: none !important;
+            background: linear-gradient(135deg, #c770f0 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 10px rgba(199, 112, 240, 0.5));
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500 !important;
+            padding: 0.8rem 1.2rem !important;
+            margin: 0 0.3rem !important;
+            border-radius: 12px !important;
+            transition: all 0.3s ease !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(199, 112, 240, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .navbar-nav .nav-link:hover::before {
+            left: 0;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(199, 112, 240, 0.3);
+        }
+
+        .navbar-nav .nav-link.active {
+            background: linear-gradient(135deg, rgba(199, 112, 240, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(199, 112, 240, 0.2);
+        }
 .sticky {
   background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
@@ -549,7 +651,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background: linear-gradient(135deg, #0c0513 0%, #1a0e2e 25%, #2d1950 50%, #16213e 75%, #0c0c0c 100%);
   color: white !important;
 }
 
@@ -609,7 +711,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background: linear-gradient(135deg, #0c0513 0%, #1a0e2e 25%, #2d1950 50%, #16213e 75%, #0c0c0c 100%);
   color: white !important;
 }
 
@@ -743,4 +845,1605 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+
+
+/* Glassmorphism Project Cards CSS */
+
+.glassmorphism-wrapper {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.glassmorphism-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Main Card Styling */
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative;
+}
+
+.glassmorphism-card:hover {
+  transform: scale(1.02) !important;
+  border: 1px solid rgba(199, 112, 240, 0.4) !important;
+  box-shadow: 0 15px 50px rgba(199, 112, 240, 0.4) !important;
+}
+
+/* Image Container */
+.image-container-glass {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.image-container-glass .card-img-top {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s ease !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.glassmorphism-card:hover .card-img-top {
+  transform: scale(1.1) !important;
+}
+
+/* Image Overlay */
+.image-overlay-glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(199, 112, 240, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 50%,
+    rgba(102, 126, 234, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glassmorphism-card:hover .image-overlay-glass {
+  opacity: 1;
+}
+
+/* Hover Icons */
+.hover-icons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glassmorphism-card:hover .hover-icons {
+  opacity: 1;
+}
+
+.icon-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-glass:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #c770f0;
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Card Body */
+.card-body-glass {
+  padding: 25px !important;
+  background: transparent !important;
+}
+
+/* Title Styling */
+.title-glass {
+  color: white !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  transition: all 0.3s ease !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glassmorphism-card:hover .title-glass {
+  background: linear-gradient(135deg, #c770f0 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateY(-2px);
+}
+
+/* Description */
+.description-glass {
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-align: justify !important;
+  line-height: 1.6 !important;
+  margin-bottom: 25px !important;
+  font-size: 0.95rem !important;
+}
+
+/* Buttons Container */
+.glass-buttons {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+
+/* Glass Buttons */
+.btn-glass {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 10px 20px !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-glass:hover::before {
+  left: 100%;
+}
+
+/* Primary Button (GitHub) */
+.btn-primary-glass {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.btn-primary-glass:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+  color: white !important;
+}
+
+/* Secondary Button (Demo) */
+.btn-secondary-glass {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.btn-secondary-glass:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px) !important;
+  color: white !important;
+  border-color: rgba(199, 112, 240, 0.4) !important;
+}
+
+/* Button Icons */
+.btn-icon {
+  font-size: 1rem !important;
+  transition: transform 0.3s ease !important;
+}
+
+.btn-glass:hover .btn-icon {
+  transform: scale(1.1) !important;
+}
+
+/* Enhanced Project Section Background */
+.project-section {
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%) !important;
+  position: relative !important;
+  min-height: 100vh !important;
+}
+
+.project-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(199, 112, 240, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .glass-buttons {
+    justify-content: center !important;
+  }
+  
+  .btn-glass {
+    flex: 1 !important;
+    justify-content: center !important;
+    min-width: 120px !important;
+  }
+  
+  .glassmorphism-wrapper {
+    padding: 15px !important;
+  }
+  
+  .card-body-glass {
+    padding: 20px !important;
+  }
+}
+
+/* Animation for cards entrance */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glassmorphism-wrapper {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Staggered animation */
+.project-card:nth-child(1) .glassmorphism-wrapper { animation-delay: 0.1s; }
+.project-card:nth-child(2) .glassmorphism-wrapper { animation-delay: 0.2s; }
+.project-card:nth-child(3) .glassmorphism-wrapper { animation-delay: 0.3s; }
+
+
+/* Fixed Image Display - الصور غتبان كاملة */
+
+/* Image Container - محسن */
+.image-container-glass {
+  position: relative;
+  overflow: hidden;
+  /* height: 250px; - نحيد هاد height الثابت */
+  min-height: 200px; /* نضع حد أدنى بس */
+  max-height: 280px; /* حد أقصى باش ماتكبرش بزاف */
+}
+
+.image-container-glass .card-img-top {
+  width: 100% !important;
+  height: auto !important; /* نخلي الارتفاع تلقائي */
+  object-fit: contain !important; /* نبدل من cover ل contain باش الصورة تبان كاملة */
+  object-position: center !important;
+  transition: transform 0.6s ease !important;
+  padding: 10px !important; /* نضيف padding صغير */
+  border-radius: 15px !important;
+  background: rgba(255, 255, 255, 0.02); /* خلفية خفيفة */
+}
+
+/* Alternative option - إذا بغيتي الصور تكون نفس الحجم */
+.image-container-glass.fixed-height {
+  height: 250px; /* حجم ثابت */
+}
+
+.image-container-glass.fixed-height .card-img-top {
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important; /* نركز على الجزء العلوي */
+}
+
+/* Hover effect محسن */
+.glassmorphism-card:hover .card-img-top {
+  transform: scale(1.05) !important; /* تصغير التكبير شوية */
+}
+
+/* Image overlay محسن */
+.image-overlay-glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* الكارت كامل يكون responsive أكثر */
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative;
+  height: auto !important; /* نخلي الارتفاع تلقائي */
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Card body يمد للأسفل */
+.card-body-glass {
+  padding: 25px !important;
+  background: transparent !important;
+  flex-grow: 1 !important; /* يمد المحتوى */
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* الوصف يمد والأزرار تبقى تحت */
+.description-glass {
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-align: justify !important;
+  line-height: 1.6 !important;
+  margin-bottom: auto !important; /* يمد للأسفل */
+  font-size: 0.95rem !important;
+  flex-grow: 1 !important;
+}
+
+/* الأزرار تبقى تحت */
+.glass-buttons {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  margin-top: 20px !important;
+}
+
+/* Responsive للصور */
+@media (max-width: 767px) {
+  .image-container-glass {
+    min-height: 180px;
+    max-height: 220px;
+  }
+  
+  .image-container-glass .card-img-top {
+    padding: 8px !important;
+  }
+}
+
+
+/* Large Image Focus Design CSS */
+
+.large-image-wrapper {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.large-image-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+/* Main Card */
+.large-image-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s ease !important;
+  height: auto !important;
+}
+
+.large-image-card:hover {
+  transform: scale(1.02) !important;
+  border-color: rgba(199, 112, 240, 0.3) !important;
+  box-shadow: 0 20px 60px rgba(199, 112, 240, 0.2) !important;
+}
+
+/* ===== PROJECT CARDS CSS - منظف ===== */
+
+/* Large Image Focus Design فقط */
+.large-image-wrapper {
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.large-image-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+/* Main Card */
+.large-image-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s ease !important;
+  height: auto !important;
+}
+
+.large-image-card:hover {
+  transform: scale(1.02) !important;
+  border-color: rgba(199, 112, 240, 0.3) !important;
+  box-shadow: 0 20px 60px rgba(199, 112, 240, 0.2) !important;
+}
+
+/* Large Image Container */
+.large-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+
+.large-project-image,
+.fitted-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.7s ease !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.large-image-card:hover .large-project-image,
+.large-image-card:hover .fitted-image {
+  transform: scale(1.03) !important;
+}
+
+/* Image Gradient Overlay */
+.image-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+.large-image-card:hover .image-gradient-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 20%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+/* Floating Action Buttons */
+.floating-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.large-image-card:hover .floating-actions {
+  opacity: 1;
+}
+
+.floating-btn {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+}
+
+/* Eye Button */
+.eye-btn:hover {
+  background: rgba(54, 162, 235, 0.8) !important;
+  border-color: rgba(54, 162, 235, 1) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(54, 162, 235, 0.4) !important;
+}
+
+/* Heart Button */
+.heart-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: scale(1.1) !important;
+}
+
+.heart-btn.liked {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ff6b9d !important;
+  animation: heartBeat 0.6s ease-in-out;
+}
+
+.heart-btn.liked:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ff6b9d !important;
+}
+
+@keyframes heartBeat {
+  0% { 
+    transform: scale(1); 
+    color: #ff6b9d; 
+  }
+  25% { 
+    transform: scale(1.3); 
+    color: #ff4081; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    color: #ff6b9d; 
+  }
+  75% { 
+    transform: scale(1.2); 
+    color: #ff4081; 
+  }
+  100% { 
+    transform: scale(1); 
+    color: #ff6b9d; 
+  }
+}
+
+/* Bottom Content على الصورة */
+.image-bottom-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.large-image-title {
+  color: white !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Tech Badges */
+.tech-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
+  padding: 3px 10px !important;
+  border-radius: 15px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.tech-badge:hover {
+  background: rgba(199, 112, 240, 0.3) !important;
+  border-color: rgba(199, 112, 240, 0.5) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Compact Content Section */
+.compact-content {
+  padding: 18px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  min-height: 120px;
+}
+
+.compact-description {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 18px !important;
+  text-align: justify !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* Compact Buttons */
+.compact-buttons {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.large-image-btn {
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  flex: 1 !important;
+  justify-content: center !important;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+  color: white !important;
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(54, 209, 220, 0.3) !important;
+}
+
+.secondary-btn:hover {
+  background: linear-gradient(135deg, #2bc5d1 0%, #4a7bd8 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(54, 209, 220, 0.4) !important;
+  color: white !important;
+}
+
+.btn-icon {
+  font-size: 1rem !important;
+  transition: transform 0.3s ease !important;
+}
+
+.large-image-btn:hover .btn-icon {
+  transform: scale(1.1) !important;
+}
+
+/* Modal Styles */
+.image-modal .modal-content {
+  background: rgba(20, 20, 20, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+}
+
+.modal-header-custom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: transparent !important;
+}
+
+.modal-title-custom {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.image-modal .btn-close {
+  filter: invert(1) !important;
+  opacity: 0.8 !important;
+}
+
+.image-modal .btn-close:hover {
+  opacity: 1 !important;
+}
+
+.modal-body-custom {
+  padding: 20px !important;
+  text-align: center !important;
+}
+
+.modal-image {
+  width: 100% !important;
+  max-height: 400px !important;
+  object-fit: contain !important;
+  border-radius: 10px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modal-description {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-align: left !important;
+  line-height: 1.6 !important;
+}
+
+.modal-description p {
+  margin-bottom: 15px !important;
+  font-size: 0.95rem !important;
+}
+
+.modal-tech-badges {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-top: 15px !important;
+}
+
+.modal-tech-badge {
+  background: rgba(199, 112, 240, 0.2) !important;
+  color: #c770f0 !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+}
+
+.modal-footer-custom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: transparent !important;
+  justify-content: center !important;
+  gap: 15px !important;
+}
+
+.modal-btn {
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 10px 25px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.primary-modal-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.primary-modal-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+  color: white !important;
+}
+
+.secondary-modal-btn {
+  background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(54, 209, 220, 0.3) !important;
+}
+
+.secondary-modal-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(54, 209, 220, 0.4) !important;
+  color: white !important;
+}
+
+/* تحسين المساحات للـ project section */
+.project-card {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  height: auto !important;
+}
+
+/* Animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== PROJECT CARDS CSS - منظف ===== */
+
+/* Large Image Focus Design فقط */
+.large-image-wrapper {
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.large-image-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+/* Main Card */
+.large-image-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s ease !important;
+  height: auto !important;
+}
+
+.large-image-card:hover {
+  transform: scale(1.02) !important;
+  border-color: rgba(199, 112, 240, 0.3) !important;
+  box-shadow: 0 20px 60px rgba(199, 112, 240, 0.2) !important;
+}
+
+/* Large Image Container */
+.large-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+
+.large-project-image,
+.fitted-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.7s ease !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.large-image-card:hover .large-project-image,
+.large-image-card:hover .fitted-image {
+  transform: scale(1.03) !important;
+}
+
+/* Image Gradient Overlay */
+.image-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+.large-image-card:hover .image-gradient-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 20%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+/* Floating Action Buttons */
+.floating-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.large-image-card:hover .floating-actions {
+  opacity: 1;
+}
+
+.floating-btn {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+}
+
+/* Eye Button */
+.eye-btn:hover {
+  background: rgba(54, 162, 235, 0.8) !important;
+  border-color: rgba(54, 162, 235, 1) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(54, 162, 235, 0.4) !important;
+}
+
+/* Heart Button */
+.heart-btn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: scale(1.1) !important;
+}
+
+.heart-btn.liked {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ff6b9d !important;
+  animation: heartBeat 0.6s ease-in-out;
+}
+
+.heart-btn.liked:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ff6b9d !important;
+}
+
+@keyframes heartBeat {
+  0% { 
+    transform: scale(1); 
+    color: #ff6b9d; 
+  }
+  25% { 
+    transform: scale(1.3); 
+    color: #ff4081; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    color: #ff6b9d; 
+  }
+  75% { 
+    transform: scale(1.2); 
+    color: #ff4081; 
+  }
+  100% { 
+    transform: scale(1); 
+    color: #ff6b9d; 
+  }
+}
+
+/* Bottom Content على الصورة */
+.image-bottom-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.large-image-title {
+  color: white !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Tech Badges */
+.tech-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
+  padding: 3px 10px !important;
+  border-radius: 15px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.tech-badge:hover {
+  background: rgba(199, 112, 240, 0.3) !important;
+  border-color: rgba(199, 112, 240, 0.5) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Compact Content Section */
+.compact-content {
+  padding: 18px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  min-height: 120px;
+}
+
+.compact-description {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 18px !important;
+  text-align: justify !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* Compact Buttons */
+.compact-buttons {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.large-image-btn {
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  flex: 1 !important;
+  justify-content: center !important;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+  color: white !important;
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(54, 209, 220, 0.3) !important;
+}
+
+.secondary-btn:hover {
+  background: linear-gradient(135deg, #2bc5d1 0%, #4a7bd8 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(54, 209, 220, 0.4) !important;
+  color: white !important;
+}
+
+.btn-icon {
+  font-size: 1rem !important;
+  transition: transform 0.3s ease !important;
+}
+
+.large-image-btn:hover .btn-icon {
+  transform: scale(1.1) !important;
+}
+
+/* Modal Styles - مع scroll ومساحة أكبر */
+.image-modal .modal-content {
+  background: rgba(20, 20, 20, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+  max-width: 800px !important;
+  max-height: 95vh !important; /* أكبر شوية */
+  overflow-y: auto !important; /* scroll عمودي */
+  overflow-x: hidden !important;
+}
+
+.image-modal .modal-dialog {
+  max-width: 800px !important;
+  margin: 20px auto !important;
+}
+
+.modal-header-custom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: transparent !important;
+}
+
+/* Images Count Badge على الكارت */
+.images-count-badge {
+  position: absolute !important;
+  top: 15px !important;
+  left: 15px !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  color: white !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+  z-index: 5 !important;
+}
+
+.large-image-card:hover .images-count-badge {
+  opacity: 1 !important;
+}
+
+/* Keyboard Instructions */
+.keyboard-instructions {
+  text-align: center !important;
+  margin-top: 10px !important;
+  padding: 8px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.keyboard-instructions small {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.8rem !important;
+}
+.modal-title-custom {
+  color: white !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.image-counter {
+  background: rgba(199, 112, 240, 0.2) !important;
+  color: #c770f0 !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+}
+
+/* Modal Image Container مع Navigation */
+.modal-image-container {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+}
+
+.modal-image {
+  width: 100% !important;
+  height: auto !important; /* ارتفاع تلقائي */
+  min-height: 400px !important; /* حد أدنى */
+  max-height: 600px !important; /* حد أقصى */
+  object-fit: contain !important; /* الصورة كاملة */
+  object-position: center !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* Navigation Buttons */
+.image-nav-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  z-index: 10 !important;
+}
+
+.image-nav-btn:hover {
+  background: rgba(199, 112, 240, 0.8) !important;
+  border-color: rgba(199, 112, 240, 1) !important;
+  transform: translateY(-50%) scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(199, 112, 240, 0.4) !important;
+}
+
+.prev-btn {
+  left: -25px !important;
+}
+
+.next-btn {
+  right: -25px !important;
+}
+
+/* Pagination Dots */
+.image-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 15px 0 20px 0 !important;
+}
+
+.pagination-dot {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.pagination-dot:hover {
+  border-color: rgba(199, 112, 240, 0.8) !important;
+  background: rgba(199, 112, 240, 0.3) !important;
+  transform: scale(1.2) !important;
+}
+
+.pagination-dot.active {
+  background: #c770f0 !important;
+  border-color: #c770f0 !important;
+  box-shadow: 0 0 10px rgba(199, 112, 240, 0.5) !important;
+}
+
+.image-modal .btn-close {
+  filter: invert(1) !important;
+  opacity: 0.8 !important;
+}
+
+.image-modal .btn-close:hover {
+  opacity: 1 !important;
+}
+
+.modal-body-custom {
+  padding: 20px !important;
+  text-align: center !important;
+  /* نحيد القيود على الارتفاع */
+}
+
+.modal-image {
+  width: 100% !important;
+  height: auto !important; /* ارتفاع تلقائي */
+  min-height: 400px !important; /* حد أدنى */
+  max-height: 600px !important; /* حد أقصى */
+  object-fit: contain !important; /* الصورة كاملة */
+  object-position: center !important;
+  border-radius: 10px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.modal-description {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-align: left !important;
+  line-height: 1.6 !important;
+  /* نحيد القيود على الارتفاع */
+  margin-bottom: 20px !important;
+}
+
+.modal-description p {
+  margin-bottom: 15px !important;
+  font-size: 0.95rem !important;
+}
+
+.modal-tech-badges {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-top: 15px !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+}
+
+.modal-tech-badge {
+  background: rgba(199, 112, 240, 0.2) !important;
+  color: #c770f0 !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+}
+
+.modal-footer-custom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: transparent !important;
+  justify-content: center !important;
+  gap: 15px !important;
+  padding: 15px 20px !important;
+  position: sticky !important; /* الأزرار تبقى مرئية */
+  bottom: 0 !important;
+  background: rgba(20, 20, 20, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.modal-btn {
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 10px 25px !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.primary-modal-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.primary-modal-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+  color: white !important;
+}
+
+.secondary-modal-btn {
+  background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(54, 209, 220, 0.3) !important;
+}
+
+.secondary-modal-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(54, 209, 220, 0.4) !important;
+  color: white !important;
+}
+
+/* تحسين المساحات للـ project section */
+.project-card {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  height: auto !important;
+}
+
+/* Animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.large-image-wrapper {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.project-card:nth-child(1) .large-image-wrapper { animation-delay: 0.1s; }
+.project-card:nth-child(2) .large-image-wrapper { animation-delay: 0.2s; }
+.project-card:nth-child(3) .large-image-wrapper { animation-delay: 0.3s; }
+
+/* Responsive Design */
+@media (min-width: 768px) and (max-width: 991px) {
+  .large-image-container {
+    height: 250px;
+  }
+  
+  .large-image-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .compact-content {
+    padding: 15px !important;
+    min-height: 110px;
+  }
+  
+  .large-image-wrapper {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .large-image-container {
+    height: 260px;
+  }
+  
+  .large-image-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .large-image-container {
+    height: 220px;
+  }
+  
+  .large-image-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .compact-content {
+    padding: 12px !important;
+    min-height: 100px;
+  }
+  
+  .compact-buttons {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  
+  .large-image-wrapper {
+    padding: 10px;
+  }
+  
+  .tech-badges {
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .image-bottom-content {
+    padding: 15px;
+  }
+  
+  .floating-actions {
+    top: 10px;
+    right: 10px;
+    gap: 8px;
+  }
+  
+  .floating-btn {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 14px !important;
+  }
+  
+  /* Modal responsive - مع scroll */
+  .image-modal .modal-dialog {
+    max-width: 95vw !important;
+    margin: 10px !important;
+  }
+  
+  .image-modal .modal-content {
+    max-height: 95vh !important;
+  }
+  
+  .modal-image {
+    min-height: 250px !important; /* حد أدنى في الموبايل */
+    max-height: 400px !important; /* حد أقصى في الموبايل */
+  }
+  
+  .modal-body-custom {
+    padding: 15px !important;
+  }
+  
+  .modal-description {
+    font-size: 0.9rem !important;
+  }
+  
+  .modal-footer-custom {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 10px 15px !important;
+  }
+  
+  .modal-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px 20px !important;
+  }
+  
+  /* Navigation Buttons في الموبايل */
+  .image-nav-btn {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 16px !important;
+  }
+  
+  .prev-btn {
+    left: -20px !important;
+  }
+  
+  .next-btn {
+    right: -20px !important;
+  }
+  
+  /* Modal Title في الموبايل */
+  .modal-title-custom {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+  
+  .image-counter {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+  }
+  
+  /* Pagination Dots في الموبايل */
+  .pagination-dot {
+    width: 10px !important;
+    height: 10px !important;
+  }
 }

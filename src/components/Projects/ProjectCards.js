@@ -1,40 +1,252 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { BsHeart, BsHeartFill, BsEye, BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 function ProjectCards(props) {
+  const [showModal, setShowModal] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // دمج الصورة الأساسية مع الصور الإضافية
+  const projectImages = [
+    props.imgPath, // الصورة الأساسية
+    ...(props.additionalImages || []) // الصور الإضافية (إذا كانت موجودة)
+  ];
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setCurrentImageIndex(0); // العودة للصورة الأولى عند الإغلاق
+  };
+  const handleLike = () => setIsLiked(!isLiked);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % projectImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length);
+  };
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index);
+  };
+
+  // Keyboard navigation
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'Escape') handleCloseModal();
+  };
+
   return (
-    <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
+    <>
+      <div className="large-image-wrapper">
+        <Card className="project-card-view large-image-card">
+          {/* Large Image Container */}
+          <div className="large-image-container">
+            <Card.Img 
+              variant="top" 
+              src={props.imgPath} 
+              alt="card-img"
+              className="large-project-image fitted-image"
+            />
+            
+            {/* Dark gradient overlay */}
+            <div className="image-gradient-overlay"></div>
+            
+            {/* Images Counter Badge - إذا كان هناك أكثر من صورة */}
+            {projectImages.length > 1 && (
+              <div className="images-count-badge">
+                <BsEye className="me-1" /> {projectImages.length}
+              </div>
+            )}
+            
+            {/* Floating Action Buttons */}
+            <div className="floating-actions">
+              <button 
+                className="floating-btn eye-btn"
+                onClick={handleShowModal}
+                title={projectImages.length > 1 ? `عرض ${projectImages.length} صور` : "عرض الصورة كاملة"}
+              >
+                <BsEye />
+              </button>
+              <button 
+                className={`floating-btn heart-btn ${isLiked ? 'liked' : ''}`}
+                onClick={handleLike}
+                title={isLiked ? "إلغاء الإعجاب" : "أعجبني"}
+              >
+                {isLiked ? <BsHeartFill /> : <BsHeart />}
+              </button>
+            </div>
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
+            {/* Bottom Content Overlay */}
+            <div className="image-bottom-content">
+              <Card.Title className="large-image-title">{props.title}</Card.Title>
+              
+              {/* Tech stack badges */}
+              <div className="tech-badges">
+                <span className="tech-badge">React</span>
+                <span className="tech-badge">CSS3</span>
+                <span className="tech-badge">JS</span>
+              </div>
+            </div>
+          </div>
 
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>
-        )}
-      </Card.Body>
-    </Card>
+          {/* Compact Content Section */}
+          <Card.Body className="compact-content">
+            <Card.Text className="compact-description">
+              {props.description}
+            </Card.Text>
+            
+            <div className="compact-buttons">
+              {props.ghLink && (
+                <Button 
+                  variant="primary" 
+                  href={props.ghLink} 
+                  target="_blank"
+                  className="large-image-btn primary-btn"
+                >
+                  <BsGithub className="btn-icon" />
+                  <span>{props.isBlog ? "Blog" : "Code"}</span>
+                </Button>
+              )}
+
+              {!props.isBlog && props.demoLink && (
+                <Button
+                  variant="primary"
+                  href={props.demoLink}
+                  target="_blank"
+                  className="large-image-btn secondary-btn"
+                >
+                  <CgWebsite className="btn-icon" />
+                  <span>Demo</span>
+                </Button>
+              )}
+            </div>
+          </Card.Body>
+        </Card>
+      </div>
+
+      {/* Modal للعرض مع Pagination */}
+      <Modal 
+        show={showModal} 
+        onHide={handleCloseModal} 
+        size="lg"
+        centered
+        className="image-modal"
+        onKeyDown={handleKeyDown}
+        tabIndex={-1}
+      >
+        <Modal.Header closeButton className="modal-header-custom">
+          <Modal.Title className="modal-title-custom">
+            <span>{props.title}</span>
+            {projectImages.length > 1 && (
+              <span className="image-counter">
+                {currentImageIndex + 1} / {projectImages.length}
+              </span>
+            )}
+          </Modal.Title>
+        </Modal.Header>
+        
+        <Modal.Body className="modal-body-custom">
+          {/* Image Container مع Navigation */}
+          <div className="modal-image-container">
+            {/* Previous Button - يظهر فقط إذا كان هناك أكثر من صورة */}
+            {projectImages.length > 1 && (
+              <button 
+                className="image-nav-btn prev-btn" 
+                onClick={prevImage}
+                title="الصورة السابقة (←)"
+              >
+                <BsChevronLeft />
+              </button>
+            )}
+
+            {/* Current Image */}
+            <img 
+              src={projectImages[currentImageIndex]} 
+              alt={`${props.title} - صورة ${currentImageIndex + 1}`}
+              className="modal-image"
+            />
+
+            {/* Next Button - يظهر فقط إذا كان هناك أكثر من صورة */}
+            {projectImages.length > 1 && (
+              <button 
+                className="image-nav-btn next-btn" 
+                onClick={nextImage}
+                title="الصورة التالية (→)"
+              >
+                <BsChevronRight />
+              </button>
+            )}
+          </div>
+
+          {/* Image Dots Pagination - يظهر فقط إذا كان هناك أكثر من صورة */}
+          {projectImages.length > 1 && (
+            <div className="image-pagination">
+              {projectImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`pagination-dot ${index === currentImageIndex ? 'active' : ''}`}
+                  onClick={() => goToImage(index)}
+                  title={`الصورة ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Project Description */}
+          <div className="modal-description">
+            <p>{props.description}</p>
+            <div className="modal-tech-badges">
+              <span className="modal-tech-badge">React</span>
+              <span className="modal-tech-badge">CSS3</span>
+              <span className="modal-tech-badge">JavaScript</span>
+            </div>
+          </div>
+
+          {/* Keyboard Instructions */}
+          {projectImages.length > 1 && (
+            <div className="keyboard-instructions">
+              <small>
+                استخدم الأسهم ← → للتنقل، أو ESC للإغلاق
+              </small>
+            </div>
+          )}
+        </Modal.Body>
+        
+        <Modal.Footer className="modal-footer-custom">
+          {props.ghLink && (
+            <Button 
+              variant="primary" 
+              href={props.ghLink} 
+              target="_blank"
+              className="modal-btn primary-modal-btn"
+            >
+              <BsGithub className="btn-icon" />
+              <span>GitHub</span>
+            </Button>
+          )}
+          {props.demoLink && (
+            <Button 
+              variant="primary" 
+              href={props.demoLink} 
+              target="_blank"
+              className="modal-btn secondary-modal-btn"
+            >
+              <CgWebsite className="btn-icon" />
+              <span>Live Demo</span>
+            </Button>
+          )}
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
+
 export default ProjectCards;
