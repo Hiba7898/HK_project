@@ -24,7 +24,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-            {t('Know Who')} <strong className="purple">{t('IM')}</strong>
+            {t('Know Who')} <strong className="purple"></strong>
             </h1>
             <Aboutcard />
           </Col>
