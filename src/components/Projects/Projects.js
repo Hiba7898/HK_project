@@ -2,14 +2,17 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import editor from "../../Assets/Projects/codeEditor.png";
+import editor from "../../Assets/Project_All/1.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
 // مثال على صور إضافية - في الواقع ستكون صور مختلفة
-import editorScreenshot1 from "../../Assets/Projects/codeEditor.png";
-import editorScreenshot2 from "../../Assets/Projects/codeEditor.png";
-import editorScreenshot3 from "../../Assets/Projects/codeEditor.png";
+import editorScreenshot1 from "../../Assets/Project_All/2.png";
+import editorScreenshot2 from "../../Assets/Project_All/3.png";
+import editorScreenshot3 from "../../Assets/Project_All/5.png";
+import editorScreenshot4 from "../../Assets/Project_All/6.png";
+import editorScreenshot5 from "../../Assets/Project_All/7.png";
+import editorScreenshot6 from "../../Assets/Project_All/8.png";
 
 import chatifyMobile from "../../Assets/Projects/codeEditor.png";
 import chatifyDesktop from "../../Assets/Projects/codeEditor.png";
@@ -60,12 +63,13 @@ function Projects() {
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={editor}
-              additionalImages={[editorScreenshot1, editorScreenshot2, editorScreenshot3]} // 3 صور إضافية
+              additionalImages={[editorScreenshot1, editorScreenshot2, editorScreenshot3,editorScreenshot4,editorScreenshot5,editorScreenshot6]} // 3 صور إضافية
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor built with React.js. Online Editor which supports HTML, CSS, and JS code with instant view of website. Online markdown editor for building README file which supports GFM, Custom HTML tags with toolbar and instant preview. Both editors support auto save of work using Local Storage."
-              ghLink="https://github.com/yourusername/editor-io"
-              demoLink="https://editor-io-demo.com"
+              title="convertisseur d'unités"
+              description="Ce convertisseur d'unités interactif a été développé pour faciliter les conversions dans différentes catégories : longueur, poids, devises, température et temps.
+              Utilisez les onglets pour naviguer entre les différentes catégories de conversion, et profitez des visualisations interactives pour mieux comprendre les rapports entre les unités."
+              ghLink="https://github.com/Hiba7898/convertisseur-unites.git"
+              demoLink="https://convertisseur-unites-snowy.vercel.app/"
             />
           </Col>
 

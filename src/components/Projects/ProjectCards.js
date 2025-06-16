@@ -161,7 +161,7 @@ function ProjectCards(props) {
               <button 
                 className="image-nav-btn prev-btn" 
                 onClick={prevImage}
-                title="الصورة السابقة (←)"
+                title="Fisrt pic(←)"
               >
                 <BsChevronLeft />
               </button>
@@ -179,7 +179,7 @@ function ProjectCards(props) {
               <button 
                 className="image-nav-btn next-btn" 
                 onClick={nextImage}
-                title="الصورة التالية (→)"
+                title="Next pic(→)"
               >
                 <BsChevronRight />
               </button>
@@ -194,7 +194,7 @@ function ProjectCards(props) {
                   key={index}
                   className={`pagination-dot ${index === currentImageIndex ? 'active' : ''}`}
                   onClick={() => goToImage(index)}
-                  title={`الصورة ${index + 1}`}
+                  title={`Picture${index + 1}`}
                 />
               ))}
             </div>
@@ -214,7 +214,7 @@ function ProjectCards(props) {
           {projectImages.length > 1 && (
             <div className="keyboard-instructions">
               <small>
-                استخدم الأسهم ← → للتنقل، أو ESC للإغلاق
+                {/* استخدم الأسهم ← → للتنقل، أو ESC للإغلاق */}
               </small>
             </div>
           )}
