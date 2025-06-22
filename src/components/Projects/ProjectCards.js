@@ -90,7 +90,7 @@ function ProjectCards(props) {
               
               {/* Tech stack badges */}
               <div className="tech-badges">
-                <span className="tech-badge">React</span>
+                <span className="tech-badge">HTML</span>
                 <span className="tech-badge">CSS3</span>
                 <span className="tech-badge">JS</span>
               </div>
@@ -204,7 +204,7 @@ function ProjectCards(props) {
           <div className="modal-description">
             <p>{props.description}</p>
             <div className="modal-tech-badges">
-              <span className="modal-tech-badge">React</span>
+              <span className="modal-tech-badge">HTML</span>
               <span className="modal-tech-badge">CSS3</span>
               <span className="modal-tech-badge">JavaScript</span>
             </div>
