@@ -89,8 +89,8 @@ function Projects() {
 
               💡 Why play?
               Tic-Tac-Toe is quick, fun, and great for sharpening your logical thinking. Whether you're competing with a friend or challenging yourself, it’s a perfect brain break!"
-              ghLink="https://github.com/yourusername/bits-of-code"
-              demoLink="https://bits-of-code-demo.com"
+              ghLink="https://github.com/Hiba7898/Tic-Tac-Toe.git"
+              demoLink="https://tic-tac-toe-wine-seven-34.vercel.app/"
             />
           </Col>
 
