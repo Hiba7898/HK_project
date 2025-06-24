@@ -6,7 +6,7 @@ import editor from "../../Assets/convertisseur_d'unités/1.png";
 import chatify from "../../Assets/tic-tac-toe/1.png";
 import bitsOfCode from "../../Assets/Pierre-Papier-Ciseaux/4.png";
 
-// مثال على صور إضافية - في الواقع ستكون صور مختلفة
+
 import editorScreenshot1 from "../../Assets/convertisseur_d'unités/2.png";
 import editorScreenshot2 from "../../Assets/convertisseur_d'unités/3.png";
 import editorScreenshot3 from "../../Assets/convertisseur_d'unités/5.png";
@@ -38,7 +38,7 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {/* مشروع مع صورة واحدة فقط */}
+          
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
@@ -70,11 +70,11 @@ function Projects() {
             />
           </Col>
 
-          {/* مشروع مع صور متعددة */}
+         
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
-              additionalImages={[tictactoe1, tictactoe2, tictactoe3]} // 3 صور إضافية
+              additionalImages={[tictactoe1, tictactoe2, tictactoe3]}
               isBlog={false}
               title="🎮 Tic-Tac-Toe Game"
               description="Welcome to the timeless classic — Tic-Tac-Toe!
@@ -94,7 +94,7 @@ function Projects() {
             />
           </Col>
 
-          {/* مشروع مع 4 صور */}
+          
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={editor}
