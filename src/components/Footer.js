@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import LogoMDS from "../Assets/Logo_MDS.jpeg";
 
 function Footer() {
   const { t } = useTranslation();
@@ -16,8 +17,10 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>{t('Developed by Hiba kandaoui')}</h3>
+          <h3>{t('Developed by Hiba Kandaoui')}</h3>
+         
         </Col>
+
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} , ❤️ {t('kandaoui')}</h3>
         </Col>
@@ -63,6 +66,19 @@ function Footer() {
                 <AiFillInstagram />
               </a>
             </li>
+            <li className="social-icons">
+             <img 
+            src={LogoMDS}
+            alt="MinDev Studio" 
+            style={{ 
+              width: "20px", 
+              height: "20px", 
+              marginTop: "8Spx", 
+              borderRadius: "50%",      // هذا باش يولي دائري
+              objectFit: "cover"        // يحافظ على تناسق الصورة داخل الدائرة
+            }} 
+          />
+          </li>
           </ul>
         </Col>
       </Row>

@@ -11,16 +11,15 @@ function ProjectCards(props) {
   const [isLiked, setIsLiked] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // دمج الصورة الأساسية مع الصور الإضافية
   const projectImages = [
-    props.imgPath, // الصورة الأساسية
-    ...(props.additionalImages || []) // الصور الإضافية (إذا كانت موجودة)
+    props.imgPath, 
+    ...(props.additionalImages || []) 
   ];
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => {
     setShowModal(false);
-    setCurrentImageIndex(0); // العودة للصورة الأولى عند الإغلاق
+    setCurrentImageIndex(0); 
   };
   const handleLike = () => setIsLiked(!isLiked);
 
@@ -59,7 +58,7 @@ function ProjectCards(props) {
             {/* Dark gradient overlay */}
             <div className="image-gradient-overlay"></div>
             
-            {/* Images Counter Badge - إذا كان هناك أكثر من صورة */}
+           
             {projectImages.length > 1 && (
               <div className="images-count-badge">
                 <BsEye className="me-1" /> {projectImages.length}
@@ -71,14 +70,14 @@ function ProjectCards(props) {
               <button 
                 className="floating-btn eye-btn"
                 onClick={handleShowModal}
-                title={projectImages.length > 1 ? `عرض ${projectImages.length} صور` : "عرض الصورة كاملة"}
+                title={projectImages.length > 1 ? `show ${projectImages.length} picture` : "Show full picture"}
               >
                 <BsEye />
               </button>
               <button 
                 className={`floating-btn heart-btn ${isLiked ? 'liked' : ''}`}
                 onClick={handleLike}
-                title={isLiked ? "إلغاء الإعجاب" : "أعجبني"}
+                title={isLiked ? "Unlike" : "I like"}
               >
                 {isLiked ? <BsHeartFill /> : <BsHeart />}
               </button>
@@ -156,7 +155,7 @@ function ProjectCards(props) {
         <Modal.Body className="modal-body-custom">
           {/* Image Container مع Navigation */}
           <div className="modal-image-container">
-            {/* Previous Button - يظهر فقط إذا كان هناك أكثر من صورة */}
+            {/* Previous Button */}
             {projectImages.length > 1 && (
               <button 
                 className="image-nav-btn prev-btn" 
@@ -186,7 +185,6 @@ function ProjectCards(props) {
             )}
           </div>
 
-          {/* Image Dots Pagination - يظهر فقط إذا كان هناك أكثر من صورة */}
           {projectImages.length > 1 && (
             <div className="image-pagination">
               {projectImages.map((_, index) => (
@@ -214,7 +212,6 @@ function ProjectCards(props) {
           {projectImages.length > 1 && (
             <div className="keyboard-instructions">
               <small>
-                {/* استخدم الأسهم ← → للتنقل، أو ESC للإغلاق */}
               </small>
             </div>
           )}
