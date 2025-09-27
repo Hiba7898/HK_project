@@ -26,6 +26,29 @@ import PierrePapierCiseaux5 from "../../Assets/Pierre-Papier-Ciseaux/8.png";
 import PierrePapierCiseaux6 from "../../Assets/Pierre-Papier-Ciseaux/9.png";
 import PierrePapierCiseaux7 from "../../Assets/Pierre-Papier-Ciseaux/10.png";
 
+import BaseHtml1 from "../../Assets/Base_html/HTML1.png";
+import BaseHtml2 from "../../Assets/Base_html/HTML2.png";
+import BaseHtml3 from "../../Assets/Base_html/HTML3.png";
+import BaseHtml4 from "../../Assets/Base_html/HTML4.png";
+import BaseHtml5 from "../../Assets/Base_html/HTML5.png";
+import BaseHtml6 from "../../Assets/Base_html/HTML6.png";
+import BaseHtml7 from "../../Assets/Base_html/HTML7.png";
+import BaseHtml8 from "../../Assets/Base_html/HTML8.png";
+import BaseHtml9 from "../../Assets/Base_html/HTML9.png";
+
+import HORLOGE1 from "../../Assets/Horloge_Numirique/HORLOGE1.png";
+import HORLOGE2 from "../../Assets/Horloge_Numirique/HORLOGE2.png";
+import HORLOGE3 from "../../Assets/Horloge_Numirique/HORLOGE3.png";
+import HORLOGE4 from "../../Assets/Horloge_Numirique/HORGLOGE4.png";
+import HORLOGE5 from "../../Assets/Horloge_Numirique/HORLOGE5.png";
+import HORLOGE6 from "../../Assets/Horloge_Numirique/HORLOGE6.png";
+
+import game1 from "../../Assets/Morrocan_Game/1.png";
+import game2 from "../../Assets/Morrocan_Game/2.png";
+import game3 from "../../Assets/Morrocan_Game/3.png";
+import game4 from "../../Assets/Morrocan_Game/3.png";
+import game5 from "../../Assets/Morrocan_Game/game5.png";
+
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -127,6 +150,57 @@ function Projects() {
             />
           </Col>
 
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={BaseHtml1}
+              additionalImages={[ BaseHtml2, BaseHtml3, BaseHtml4, BaseHtml5, BaseHtml6 , BaseHtml7 , BaseHtml9]} // لا توجد صور إضافية
+              isBlog={false}
+              title="Bases-html-pour-les-d-butants"
+              description="منصة تعليمية حديثة لتعلم أساسيات تطوير الويب باللغة العربية
+              . الصفر HTML موقع تعليمي تفاعلي مصمم خصيصاً للمبتدئين العرب الراغبين في تعلم
+              .يجمع الموقع بين التعليم النظري والتطبيق العملي في بيئة سهلة الاستخدام
+              "
+              ghLink="https://github.com/Hiba7898/Bases-HTML-pour-les-d-butants.git"
+              demoLink="https://bases-html-pour-les-d-butants.vercel.app/"
+            />
+          </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={HORLOGE1}
+              additionalImages={[ HORLOGE6 ,HORLOGE2, HORLOGE3 ,HORLOGE4 , HORLOGE5 ]} // لا توجد صور إضافية
+              isBlog={false}
+              title="Digital Clock Mini-Project"
+              description="This project is a web-based digital clock built using HTML, CSS, and JavaScript.
+               Its purpose is to demonstrate dynamic updates on a web page and client-side time handling.
+              "
+              ghLink="https://github.com/Hiba7898/horloge-numrique-mindev-studio.git"
+              demoLink="https://mini-projet-une-horloge-num-rique-e.vercel.app/"
+            />
+          </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={game1}
+              additionalImages={[ game2 ,game3, game4 ,game5]} // لا توجد صور إضافية
+              isBlog={false}
+              title="moroccan-memory-game"
+              description="Cultural Expl The game showcases various elements of Moroccan
+
+                M Players can choose from three difficulty levels—Easy, Medium, and Hard—
+
+                Multiplayer Mode: Engage in friendly competition with a second player in the multiplayer
+
+                User-Friendly Interface: The game boasts a clean and intuitive design, ensuring a seamless experience for players of all ages.
+
+                Responsive Design: Optimized for both desktop and mobile devices, allowing players to enjoy the game on various platforms.
+
+                Whether you're looking to challenge your memory, learn about Moroccan culture, or simply have fun, the Moroccan Memory Game offers an engaging experience for everyone.
+                              "
+              ghLink="https://github.com/Hiba7898/moroccan-memory-game.git"
+              demoLink="https://moroccan-memory-game.vercel.app/"
+            />
+          </Col>
         </Row>
       </Container>
     </Container>

@@ -71,14 +71,14 @@ function ProjectCards(props) {
               <button 
                 className="floating-btn eye-btn"
                 onClick={handleShowModal}
-                title={projectImages.length > 1 ? `عرض ${projectImages.length} صور` : "عرض الصورة كاملة"}
+                title={projectImages.length > 1 ? `SHOW ${projectImages.length} PICTURE ` : "SHOW  "}
               >
                 <BsEye />
               </button>
               <button 
                 className={`floating-btn heart-btn ${isLiked ? 'liked' : ''}`}
                 onClick={handleLike}
-                title={isLiked ? "إلغاء الإعجاب" : "أعجبني"}
+                title={isLiked ? "UNLIKE" : "I LIKE"}
               >
                 {isLiked ? <BsHeartFill /> : <BsHeart />}
               </button>
@@ -89,11 +89,11 @@ function ProjectCards(props) {
               <Card.Title className="large-image-title">{props.title}</Card.Title>
               
               {/* Tech stack badges */}
-              <div className="tech-badges">
+              {/* <div className="tech-badges">
                 <span className="tech-badge">HTML</span>
                 <span className="tech-badge">CSS3</span>
                 <span className="tech-badge">JS</span>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -203,11 +203,11 @@ function ProjectCards(props) {
           {/* Project Description */}
           <div className="modal-description">
             <p>{props.description}</p>
-            <div className="modal-tech-badges">
+            {/* <div className="modal-tech-badges">
               <span className="modal-tech-badge">HTML</span>
               <span className="modal-tech-badge">CSS3</span>
               <span className="modal-tech-badge">JavaScript</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Keyboard Instructions */}
