@@ -109,6 +109,7 @@ function Home2() {
                   <AiFillInstagram />
                 </a>
               </li>
+              
             </ul>
           </Col>
         </Row>
