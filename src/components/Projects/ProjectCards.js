@@ -70,22 +70,16 @@ function ProjectCards(props) {
               <button 
                 className="floating-btn eye-btn"
                 onClick={handleShowModal}
-<<<<<<< HEAD
-                title={projectImages.length > 1 ? `SHOW ${projectImages.length} PICTURE ` : "SHOW  "}
-=======
                 title={projectImages.length > 1 ? `show ${projectImages.length} picture` : "Show full picture"}
->>>>>>> bc025cd4b2dc7d9c054a5b46f0c58c080623c72a
+
               >
                 <BsEye />
               </button>
               <button 
                 className={`floating-btn heart-btn ${isLiked ? 'liked' : ''}`}
                 onClick={handleLike}
-<<<<<<< HEAD
-                title={isLiked ? "UNLIKE" : "I LIKE"}
-=======
                 title={isLiked ? "Unlike" : "I like"}
->>>>>>> bc025cd4b2dc7d9c054a5b46f0c58c080623c72a
+
               >
                 {isLiked ? <BsHeartFill /> : <BsHeart />}
               </button>
