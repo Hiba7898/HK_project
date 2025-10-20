@@ -1,3 +1,8 @@
+
+
+
+
+
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/prgrm.png";
@@ -25,8 +30,6 @@ function Home2() {
                 <b className="purple"> {t('Hiba Kandaoui')}</b>
               </i>
               {t('dv web')}
-
-
 
               <br />
               <br />
@@ -64,20 +67,6 @@ function Home2() {
         </Row>
         <Row>
           <Col md={12} className="home-about-social">
-          {/* <Col md={8} className="home-about-description"></Col> */}
-            {/* <h1 style={{ 
-              color: 'white', 
-              fontSize: '2.5em', 
-              fontWeight: '700', 
-              marginBottom: '50px',
-              textAlign: 'center',
-              background: 'linear-gradient(135deg, #c770f0 0%, #764ba2 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>
-              {t('Our Main Services')}
-            </h1> */}
             <h1 style={{ fontSize: "2.6em" }}>
                {t('Our Main')}<span className="purple"> {t('Services')} </span> 
             </h1>
@@ -97,13 +86,13 @@ function Home2() {
                     border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}></i>
                 </div>
-                <h3>Site Web Vitrine</h3>
-                <p>Création de sites web élégants et professionnels pour présenter votre entreprise ou votre marque avec un design moderne et responsive.</p>
+                <h3>{t('service1_title')}</h3>
+                <p>{t('service1_desc')}</p>
                 <ul>
-                  <li>Design responsive et mobile-first</li>
-                  <li>Optimisation SEO intégrée</li>
-                  <li>Interface utilisateur moderne</li>
-                  <li>Performance optimisée</li>
+                  <li>{t('service1_feat1')}</li>
+                  <li>{t('service1_feat2')}</li>
+                  <li>{t('service1_feat3')}</li>
+                  <li>{t('service1_feat4')}</li>
                 </ul>
               </div>
 
@@ -121,13 +110,13 @@ function Home2() {
                     border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}></i>
                 </div>
-                <h3>Site E-commerce</h3>
-                <p>Développement de boutiques en ligne complètes avec gestion des produits, paiements sécurisés et tableau de bord administrateur.</p>
+                <h3>{t('service2_title')}</h3>
+                <p>{t('service2_desc')}</p>
                 <ul>
-                  <li>Catalogue produits avancé</li>
-                  <li>Intégration passerelles de paiement</li>
-                  <li>Gestion des commandes et stock</li>
-                  <li>Panneau d'administration</li>
+                  <li>{t('service2_feat1')}</li>
+                  <li>{t('service2_feat2')}</li>
+                  <li>{t('service2_feat3')}</li>
+                  <li>{t('service2_feat4')}</li>
                 </ul>
               </div>
 
@@ -145,13 +134,13 @@ function Home2() {
                     border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}></i>
                 </div>
-                <h3>Développement Front-End</h3>
-                <p>Création d'interfaces utilisateur interactives et responsives avec les dernières technologies web modernes.</p>
+                <h3>{t('service3_title')}</h3>
+                <p>{t('service3_desc')}</p>
                 <ul>
-                  <li>HTML5, CSS3, JavaScript ES6+</li>
-                  <li>React.js, Vue.js, Angular</li>
-                  <li>Animations et effets dynamiques</li>
-                  <li>Accessibilité et UX optimisée</li>
+                  <li>{t('service3_feat1')}</li>
+                  <li>{t('service3_feat2')}</li>
+                  <li>{t('service3_feat3')}</li>
+                  <li>{t('service3_feat4')}</li>
                 </ul>
               </div>
 
@@ -169,13 +158,13 @@ function Home2() {
                     border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}></i>
                 </div>
-                <h3>Développement Back-End</h3>
-                <p>Développement d'applications côté serveur robustes avec bases de données et APIs sécurisées.</p>
+                <h3>{t('service4_title')}</h3>
+                <p>{t('service4_desc')}</p>
                 <ul>
-                  <li>Node.js, Express.js, PHP, Laravel</li>
-                  <li>Bases de données SQL/NoSQL</li>
-                  <li>APIs REST et GraphQL</li>
-                  <li>Authentification et sécurité</li>
+                  <li>{t('service4_feat1')}</li>
+                  <li>{t('service4_feat2')}</li>
+                  <li>{t('service4_feat3')}</li>
+                  <li>{t('service4_feat4')}</li>
                 </ul>
               </div>
 
@@ -193,13 +182,13 @@ function Home2() {
                     border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}></i>
                 </div>
-                <h3>Développement Full-Stack</h3>
-                <p>Solutions complètes de A à Z, du front-end au back-end, avec déploiement sur plateformes cloud.</p>
+                <h3>{t('service5_title')}</h3>
+                <p>{t('service5_desc')}</p>
                 <ul>
-                  <li>Applications web complètes</li>
-                  <li>Intégration front-end/back-end</li>
-                  <li>Déploiement cloud (AWS, Vercel, Netlify)</li>
-                  <li>Architecture scalable</li>
+                  <li>{t('service5_feat1')}</li>
+                  <li>{t('service5_feat2')}</li>
+                  <li>{t('service5_feat3')}</li>
+                  <li>{t('service5_feat4')}</li>
                 </ul>
               </div>
 
@@ -217,13 +206,13 @@ function Home2() {
                     border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}></i>
                 </div>
-                <h3>Optimisation & Maintenance</h3>
-                <p>Amélioration des performances, correction de bugs et mise à jour vers les standards modernes.</p>
+                <h3>{t('service6_title')}</h3>
+                <p>{t('service6_desc')}</p>
                 <ul>
-                  <li>Optimisation des performances</li>
-                  <li>Amélioration SEO</li>
-                  <li>Correction de bugs</li>
-                  <li>Refactorisation de code</li>
+                  <li>{t('service6_feat1')}</li>
+                  <li>{t('service6_feat2')}</li>
+                  <li>{t('service6_feat3')}</li>
+                  <li>{t('service6_feat4')}</li>
                 </ul>
               </div>
             </div>
@@ -276,7 +265,6 @@ function Home2() {
                   <AiFillInstagram />
                 </a>
               </li>
-              
             </ul>
           </Col>
         </Row>

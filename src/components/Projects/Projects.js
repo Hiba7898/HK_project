@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
@@ -5,7 +8,6 @@ import Particle from "../Particle";
 import editor from "../../Assets/convertisseur_d'unités/1.png";
 import chatify from "../../Assets/tic-tac-toe/1.png";
 import bitsOfCode from "../../Assets/Pierre-Papier-Ciseaux/4.png";
-
 
 import editorScreenshot1 from "../../Assets/convertisseur_d'unités/2.png";
 import editorScreenshot2 from "../../Assets/convertisseur_d'unités/3.png";
@@ -48,103 +50,122 @@ import game2 from "../../Assets/Morrocan_Game/2.png";
 import game3 from "../../Assets/Morrocan_Game/3.png";
 import game4 from "../../Assets/Morrocan_Game/3.png";
 import game5 from "../../Assets/Morrocan_Game/game5.png";
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
+  const { t } = useTranslation();
+  
+  // Helper function to build project descriptions
+  const getRPSDescription = () => {
+    return `${t('rps_desc1')}
+
+${t('rps_howto')}
+${t('rps_step1')}
+${t('rps_step2')}
+${t('rps_step3')}
+- ${t('rps_rule1')}
+- ${t('rps_rule2')}
+- ${t('rps_rule3')}
+${t('rps_draw')}
+
+${t('rps_why')}
+${t('rps_why_desc')}`;
+  };
+
+  const getTTTDescription = () => {
+    return `${t('ttt_desc1')}
+
+${t('ttt_howto')}
+${t('ttt_step1')}
+${t('ttt_step2')}
+${t('ttt_step3')}
+
+${t('ttt_why')}
+${t('ttt_why_desc')}`;
+  };
+
+  const getConverterDescription = () => {
+    return `${t('conv_desc1')}
+
+${t('conv_categories')}
+- ${t('conv_cat1')}
+- ${t('conv_cat2')}
+- ${t('conv_cat3')}
+- ${t('conv_cat4')}
+- ${t('conv_cat5')}
+
+${t('conv_howto')}
+${t('conv_step1')}
+${t('conv_step2')}
+${t('conv_step3')}
+
+${t('conv_why')}
+${t('conv_why_desc')}`;
+  };
+
+  const getHTMLDescription = () => {
+    return `${t('html_desc1')}
+${t('html_desc2')}
+${t('html_desc3')}`;
+  };
+
+  const getClockDescription = () => {
+    return `${t('clock_desc1')}
+${t('clock_desc2')}`;
+  };
+
+  const getGameDescription = () => {
+    return `${t('game_desc1')}
+${t('game_desc2')}
+${t('game_desc3')}
+${t('game_desc4')}
+${t('game_desc5')}
+${t('game_desc6')}`;
+  };
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          {t('My Recent')} <strong className="purple"> {t('Works')} </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+           {t("Here are a few projects I've worked on recently.")} 
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
-              additionalImages={[PierrePapierCiseaux1, PierrePapierCiseaux2, PierrePapierCiseaux3, PierrePapierCiseaux4, PierrePapierCiseaux5, PierrePapierCiseaux6 , PierrePapierCiseaux7]} // لا توجد صور إضافية
+              additionalImages={[PierrePapierCiseaux1, PierrePapierCiseaux2, PierrePapierCiseaux3, PierrePapierCiseaux4, PierrePapierCiseaux5, PierrePapierCiseaux6, PierrePapierCiseaux7]}
               isBlog={false}
-              title="✊✋✌️ Rock-Paper-Scissors Game"
-              description="Step into a fun and fast-paced battle of Rock-Paper-Scissors!
-              This simple game of chance and strategy pits you against the computer in a quick decision-making showdown.
-
-              👥 How to Play:
-              Choose rock (✊), paper (✋), or scissors (✌️).
-
-              The computer makes a random choice.
-
-              The winner is determined by the classic rules:
-
-              Rock beats scissors
-
-              Scissors beat paper
-
-              Paper beats rock
-
-              If both choose the same, it’s a draw.
-
-              💡 Why play?
-              It’s easy, fun, and perfect for all ages. Play to pass time, settle debates, or just challenge the computer for fun!"
+              title={t('rps_title')}
+              description={getRPSDescription()}
               ghLink="https://github.com/Hiba7898/Pierre-Papier-Ciseaux.git"
               demoLink="https://pierre-papier-ciseaux-weld.vercel.app/"
             />
           </Col>
-
          
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={chatify}
               additionalImages={[tictactoe1, tictactoe2, tictactoe3]}
               isBlog={false}
-              title="🎮 Tic-Tac-Toe Game"
-              description="Welcome to the timeless classic — Tic-Tac-Toe!
-              This is a 2-player strategy game played on a 3x3 grid. The goal is simple: be the first to align three of your symbols (❌ or ⭕) either horizontally, vertically, or diagonally.
-
-              👥 How to Play:
-              Two players take turns placing their symbol (X or O) in an empty square.
-
-              The first to get three in a row wins.
-
-              If all squares are filled with no winner, it’s a draw.
-
-              💡 Why play?
-              Tic-Tac-Toe is quick, fun, and great for sharpening your logical thinking. Whether you're competing with a friend or challenging yourself, it’s a perfect brain break!"
+              title={t('ttt_title')}
+              description={getTTTDescription()}
               ghLink="https://github.com/Hiba7898/Tic-Tac-Toe.git"
               demoLink="https://tic-tac-toe-wine-seven-34.vercel.app/"
             />
           </Col>
 
-          
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={editor}
-              additionalImages={[editorScreenshot1, editorScreenshot2, editorScreenshot3,editorScreenshot4,editorScreenshot5,editorScreenshot6]} // 3 صور إضافية
+              additionalImages={[editorScreenshot1, editorScreenshot2, editorScreenshot3, editorScreenshot4, editorScreenshot5, editorScreenshot6]}
               isBlog={false}
-              title="🔄 Interactive Unit Converter"
-              description="This interactive unit converter was designed to make it easy and intuitive to switch between different measurement units across multiple categories. Whether you're working on science, travel, finance, or everyday tasks, this tool helps you convert values quickly and accurately.
-              📂 Categories Included:
-                Length (e.g., meters, kilometers, miles)
-
-                Weight (e.g., grams, kilograms, pounds)
-
-                Currency (e.g., USD, EUR, MAD) (real-time rates may vary)
-
-                Temperature (Celsius, Fahrenheit, Kelvin)
-
-                Time (seconds, minutes, hours, days)
-
-                🧭 How to Use:
-                Select a conversion category using the tabs at the top.
-
-                Enter a value and choose the input/output units.
-
-                Instantly view the result, along with a visual or contextual explanation.
-
-                💡 Why use it?
-                This tool is ideal for students, professionals, and travelers. It offers a clear, interactive way to understand relationships between units and ensures that you never make a miscalculation again."
+              title={t('conv_title')}
+              description={getConverterDescription()}
               ghLink="https://github.com/Hiba7898/convertisseur-unites.git"
               demoLink="https://convertisseur-unites-snowy.vercel.app/"
             />
@@ -153,13 +174,10 @@ function Projects() {
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={BaseHtml1}
-              additionalImages={[ BaseHtml2, BaseHtml3, BaseHtml4, BaseHtml5, BaseHtml6 , BaseHtml7 , BaseHtml9]} // لا توجد صور إضافية
+              additionalImages={[BaseHtml2, BaseHtml3, BaseHtml4, BaseHtml5, BaseHtml6, BaseHtml7, BaseHtml9]}
               isBlog={false}
-              title="Bases-html-pour-les-d-butants"
-              description="منصة تعليمية حديثة لتعلم أساسيات تطوير الويب باللغة العربية
-              . الصفر HTML موقع تعليمي تفاعلي مصمم خصيصاً للمبتدئين العرب الراغبين في تعلم
-              .يجمع الموقع بين التعليم النظري والتطبيق العملي في بيئة سهلة الاستخدام
-              "
+              title={t('html_title')}
+              description={getHTMLDescription()}
               ghLink="https://github.com/Hiba7898/Bases-HTML-pour-les-d-butants.git"
               demoLink="https://bases-html-pour-les-d-butants.vercel.app/"
             />
@@ -168,12 +186,10 @@ function Projects() {
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={HORLOGE1}
-              additionalImages={[ HORLOGE6 ,HORLOGE2, HORLOGE3 ,HORLOGE4 , HORLOGE5 ]} // لا توجد صور إضافية
+              additionalImages={[HORLOGE6, HORLOGE2, HORLOGE3, HORLOGE4, HORLOGE5]}
               isBlog={false}
-              title="Digital Clock Mini-Project"
-              description="This project is a web-based digital clock built using HTML, CSS, and JavaScript.
-               Its purpose is to demonstrate dynamic updates on a web page and client-side time handling.
-              "
+              title={t('clock_title')}
+              description={getClockDescription()}
               ghLink="https://github.com/Hiba7898/horloge-numrique-mindev-studio.git"
               demoLink="https://mini-projet-une-horloge-num-rique-e.vercel.app/"
             />
@@ -182,25 +198,15 @@ function Projects() {
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={game1}
-              additionalImages={[ game2 ,game3, game4 ,game5]} // لا توجد صور إضافية
+              additionalImages={[game2, game3, game4, game5]}
               isBlog={false}
-              title="moroccan-memory-game"
-              description="Cultural Expl The game showcases various elements of Moroccan
-
-                M Players can choose from three difficulty levels—Easy, Medium, and Hard—
-
-                Multiplayer Mode: Engage in friendly competition with a second player in the multiplayer
-
-                User-Friendly Interface: The game boasts a clean and intuitive design, ensuring a seamless experience for players of all ages.
-
-                Responsive Design: Optimized for both desktop and mobile devices, allowing players to enjoy the game on various platforms.
-
-                Whether you're looking to challenge your memory, learn about Moroccan culture, or simply have fun, the Moroccan Memory Game offers an engaging experience for everyone.
-                              "
+              title={t('game_title')}
+              description={getGameDescription()}
               ghLink="https://github.com/Hiba7898/moroccan-memory-game.git"
               demoLink="https://moroccan-memory-game.vercel.app/"
             />
           </Col>
+
         </Row>
       </Container>
     </Container>

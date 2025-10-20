@@ -5,8 +5,10 @@ import Modal from "react-bootstrap/Modal";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import { BsHeart, BsHeartFill, BsEye, BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { useTranslation } from 'react-i18next';
 
 function ProjectCards(props) {
+  const { t } = useTranslation();
   const [showModal, setShowModal] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -125,7 +127,7 @@ function ProjectCards(props) {
                   className="large-image-btn secondary-btn"
                 >
                   <CgWebsite className="btn-icon" />
-                  <span>Demo</span>
+                  <span> {t('Demo')}</span>
                 </Button>
               )}
             </div>
@@ -239,7 +241,7 @@ function ProjectCards(props) {
               className="modal-btn secondary-modal-btn"
             >
               <CgWebsite className="btn-icon" />
-              <span>Live Demo</span>
+              <span>  {t('Live Demo')}</span>
             </Button>
           )}
         </Modal.Footer>

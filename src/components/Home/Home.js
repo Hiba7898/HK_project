@@ -92,7 +92,7 @@ function Home() {
                   }}
                 >
                   <i className="fas fa-user" style={{ fontSize: "0.9rem" }}></i>
-                  About me
+                    {t('About me')}
                 </Button>
 
                 {/* Contact Me Button */}
@@ -127,7 +127,7 @@ function Home() {
                   }}
                 >
                   <i className="fas fa-envelope" style={{ fontSize: "0.9rem" }}></i>
-                  Contact me
+                   {t('Contact me')}
                 </Button>
               </div>
             </Col>
