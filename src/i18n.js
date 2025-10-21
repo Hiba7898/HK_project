@@ -113,7 +113,7 @@ i18n
           "conv_why_desc": "This tool is ideal for students, professionals, and travelers. It offers a clear, interactive way to understand relationships between units and ensures that you never make a miscalculation again.",
           
           // HTML Basics Project
-          "html_title": "Bases-html-pour-les-débutants",
+          "html_title": "HTML Basics for Beginners",
           "html_desc1": "A modern educational platform for learning the basics of web development in Arabic.",
           "html_desc2": "An interactive educational website designed specifically for Arab beginners who want to learn HTML from scratch.",
           "html_desc3": "The site combines theoretical learning and practical application in an easy-to-use environment.",

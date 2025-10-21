@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/prgrm.png";
