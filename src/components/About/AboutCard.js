@@ -21,10 +21,10 @@ function AboutCard() {
             {t('AboutJourney1')}
             {t('AboutJourney2')} 💻🚀
             <br />
-            <br />
+           {/*  <br />
             {t('AboutJourney3')}
             {t('AboutCode1')}
-            <br />
+            <br /> */}
             <br />
             {t('AboutCode2')}
           </p>

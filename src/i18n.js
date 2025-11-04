@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { useTranslation, initReactI18next } from "react-i18next";
@@ -63,8 +57,8 @@ i18n
           "AboutDesc3": "Whether it's building intuitive interfaces or creating robust, scalable back-end architectures, my goal is always to blend creativity with functionality.",
           "AboutJourney1": "My journey into programming began with a passion for problem-solving and a desire to bring ideas to life in the digital world.",
           "AboutJourney2": "What started as curiosity has now grown into a commitment to crafting innovative, tangible solutions that have real-world impact.",
-          "AboutJourney3": "From developing dynamic websites to architecting complex web applications, I thrive on the challenge of turning abstract ideas into powerful digital tools.",
-          "AboutCode1": "Every line of code is an opportunity to innovate, and every project is a chance to learn, grow, and push the boundaries of what's possible.",
+         /*  "AboutJourney3": "From developing dynamic websites to architecting complex web applications, I thrive on the challenge of turning abstract ideas into powerful digital tools.", */
+         /*  "AboutCode1": "Every line of code is an opportunity to innovate, and every project is a chance to learn, grow, and push the boundaries of what's possible.", */
           "AboutCode2": "I'm excited to continue exploring new technologies, honing my skills, and contributing to projects that inspire, engage, and make a difference.",
           "Days I":"Days I",
           "Code": "Code",
@@ -226,14 +220,15 @@ i18n
           "Skillset":"Professionnel",
           "Tools":"Outils",
           "I use" : " que j'utilise",
-          "AboutCard2":"Je suis un développeur web Full Stack ",
+          "AboutCard1":"Je suis ",
+          "AboutCard2":" un développeur web Full Stack ",
           "AboutDesc1": "animé par une profonde curiosité pour explorer les possibilités infinies de la technologie.",
           "AboutDesc2": "Avec une solide base dans les technologies front-end et back-end, je me consacre à transformer des concepts en expériences numériques immersives et centrées sur l'utilisateur.",
           "AboutDesc3": "Qu'il s'agisse de créer des interfaces intuitives ou de concevoir des architectures back-end robustes et évolutives, mon objectif est toujours de mêler créativité et fonctionnalité.",
           "AboutJourney1": "Mon parcours en programmation a commencé par une passion pour la résolution de problèmes et le désir de donner vie à des idées dans le monde numérique.",
           "AboutJourney2": "Ce qui a commencé par de la curiosité est devenu un engagement à concevoir des solutions innovantes et tangibles ayant un impact réel.",
-          "AboutJourney3": "Du développement de sites dynamiques à la conception d'applications web complexes, j'adore relever le défi de transformer des idées abstraites en outils numériques puissants.",
-          "AboutCode1": "Chaque ligne de code est une opportunité d'innover, et chaque projet est une chance d'apprendre, de grandir et de repousser les limites du possible.",
+         /*  "AboutJourney3": "Du développement de sites dynamiques à la conception d'applications web complexes, j'adore relever le défi de transformer des idées abstraites en outils numériques puissants.", */
+         /*  "AboutCode1": "Chaque ligne de code est une opportunité d'innover, et chaque projet est une chance d'apprendre, de grandir et de repousser les limites du possible.", */
           "AboutCode2": "Je suis impatient de continuer à explorer de nouvelles technologies, à affiner mes compétences et à contribuer à des projets qui inspirent, engagent et font la différence.",
           "Days I":"code",
           "Code": "du jour",

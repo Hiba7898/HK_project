@@ -356,7 +356,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+   /*  background-color: #181a27 !important; */
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -2700,7 +2700,7 @@ button:focus {
 }
 
 /* Section Title */
-.home-about-social h1 {
+/* .home-about-social h1 {
   background: linear-gradient(135deg, #c770f0 0%, #667eea 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -2712,7 +2712,7 @@ button:focus {
   position: relative !important;
   display: block !important;
   visibility: visible !important;
-}
+} */
 
 /* Background Effects */
 .service-item::before {
