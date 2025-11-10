@@ -35,7 +35,7 @@ import BaseHtml4 from "../../Assets/Base_html/HTML4.png";
 import BaseHtml5 from "../../Assets/Base_html/HTML5.png";
 import BaseHtml6 from "../../Assets/Base_html/HTML6.png";
 import BaseHtml7 from "../../Assets/Base_html/HTML7.png";
-import BaseHtml8 from "../../Assets/Base_html/HTML8.png";
+/* import BaseHtml8 from "../../Assets/Base_html/HTML8.png"; */
 import BaseHtml9 from "../../Assets/Base_html/HTML9.png";
 
 import HORLOGE1 from "../../Assets/Horloge_Numirique/HORLOGE1.png";

@@ -14,8 +14,8 @@ import { CgFileDocument } from "react-icons/cg";
 import {  Dropdown } from "react-bootstrap";
 import usFlag from "../Assets/us_flag.png"; // Importez vos images de drapeaux
 import frFlag from "../Assets/fr_flag.png"; 
-import { changeLanguage } from "i18next";
-import { useTransition } from "react";
+/* import { changeLanguage } from "i18next";
+import { useTransition } from "react"; */
 import { useTranslation } from 'react-i18next';
 
 
