@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/prgrm.png";
 import Tilt from "react-parallax-tilt";
-/* import {
+import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
-} from "react-icons/ai"; */
-/* import { FaLinkedinIn } from "react-icons/fa"; */
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 function Home2() {
@@ -67,7 +67,7 @@ function Home2() {
             </h1>
             
             <div className="services-grid">
-          
+            
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-globe" style={{ 
@@ -91,7 +91,6 @@ function Home2() {
                 </ul>
               </div>
 
-             
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-shopping-cart" style={{ 
@@ -115,7 +114,6 @@ function Home2() {
                 </ul>
               </div>
 
-           
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fab fa-react" style={{ 
@@ -163,7 +161,7 @@ function Home2() {
                 </ul>
               </div>
 
-        
+          
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-layer-group" style={{ 
@@ -187,7 +185,7 @@ function Home2() {
                 </ul>
               </div>
 
-       
+           
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-tachometer-alt" style={{ 
@@ -213,7 +211,7 @@ function Home2() {
             </div>
           </Col>
         </Row> */}
-{/*         <Row>
+        <Row>
           <Col md={12} className="home-about-social">
             <h1>{t('FIND ME ON')}  </h1>
             <p>
@@ -262,7 +260,7 @@ function Home2() {
               </li>
             </ul>
           </Col>
-        </Row> */}
+        </Row>
       </Container>
     </Container>
   );
