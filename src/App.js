@@ -16,7 +16,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useTranslation } from 'react-i18next';
+/* import { useTranslation } from 'react-i18next'; */
 function App() {
  /*  const { t } = useTranslation(); */
   const [load, upadateLoad] = useState(true);

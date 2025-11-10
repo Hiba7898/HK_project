@@ -7,7 +7,7 @@ import Tilt from "react-parallax-tilt";
   AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai"; */
-import { FaLinkedinIn } from "react-icons/fa";
+/* import { FaLinkedinIn } from "react-icons/fa"; */
 import { useTranslation } from 'react-i18next';
 
 function Home2() {
