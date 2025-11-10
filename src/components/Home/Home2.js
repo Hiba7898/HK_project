@@ -15,15 +15,59 @@ function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <>
         <Row>
+          <Col md={8} className="home-about-description">
+            <h1 style={{ fontSize: "2.6em" }}>
+               {t('LET ME')}<span className="purple"> {t('INTRODUCE')} </span> {t('MYSELF')} 
+            </h1>
+            <p className="home-about-body">
+              <i>
+                <b className="purple"> {t('Hiba Kandaoui')}</b>
+              </i>
+              {t('dv web')}
+
+              <br />
+              <br />
+              {t('dv web2')}  &nbsp;
+              <i>
+                <b className="purple">{t('dv web3')}  </b>  {t('dv web4')} 
+                
+              </i>
+              <br />
+              <br />
+               {t('dv web5')} 
+                <b className="purple">{t('dv web6')} </b> 
+                {t('dv web7')} 
+              <i> 
+                <b className="purple">
+                  {" "}
+                  {t('dv web8')} 
+                </b>
+                 
+              </i> {t('dv web9')} 
+              &nbsp;{t('dv web10')}    
+              <b className="purple">
+                  {" "}
+                  {t('dv web11')}  
+                </b> 
+                {t('dv web12')}  
+            </p>
+          </Col>
+
+          <Col md={4} className="myAvtar">
+            <Tilt>
+              <img src={myImg} style={{borderRadius: "200px"}} className="img-fluid" alt="avatar" />
+            </Tilt>
+          </Col>
+        </Row>
+{/*         <Row>
           <Col md={12} className="home-about-social">
             <h1 style={{ fontSize: "2.6em" }}>
                {t('Our Main')}<span className="purple"> {t('Services')} </span> 
             </h1>
             
             <div className="services-grid">
-              {/* Site Web Vitrine */}
+          
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-globe" style={{ 
@@ -47,7 +91,7 @@ function Home2() {
                 </ul>
               </div>
 
-              {/* E-Commerce */}
+             
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-shopping-cart" style={{ 
@@ -71,7 +115,7 @@ function Home2() {
                 </ul>
               </div>
 
-              {/* Front-End Development */}
+           
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fab fa-react" style={{ 
@@ -95,7 +139,7 @@ function Home2() {
                 </ul>
               </div>
 
-              {/* Back-End Development */}
+       
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-server" style={{ 
@@ -119,7 +163,7 @@ function Home2() {
                 </ul>
               </div>
 
-              {/* Full-Stack Development */}
+        
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-layer-group" style={{ 
@@ -143,7 +187,7 @@ function Home2() {
                 </ul>
               </div>
 
-              {/* Web App Optimization */}
+       
               <div className="service-item">
                 <div className="service-icon" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                   <i className="fas fa-tachometer-alt" style={{ 
@@ -168,8 +212,8 @@ function Home2() {
               </div>
             </div>
           </Col>
-        </Row>
-        <Row>
+        </Row> */}
+{/*         <Row>
           <Col md={12} className="home-about-social">
             <h1>{t('FIND ME ON')}  </h1>
             <p>
@@ -218,10 +262,7 @@ function Home2() {
               </li>
             </ul>
           </Col>
-        </Row>
-        
-        </>
-
+        </Row> */}
       </Container>
     </Container>
   );
