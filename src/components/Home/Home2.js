@@ -355,54 +355,11 @@ function Home2() {
           </Col>
 
           {/* Section des réseaux sociaux intégrée dans le même Row */}
-          <Col md={12} className="home-about-social">
+{/*           <Col md={12} className="home-about-social-icon">
             <h1>{t('FIND ME ON')}  </h1>
             <p>
                {t('Feel free to')}<span className="purple"> {t('connect')}</span> {t('with me')}
             </p>
-{/*             <ul className="home-about-social-links">
-              <li className="social-icons">
-                
-                  href="https://github.com/Hiba7898"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                
-                  href="https://github.com/Hiba7898"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                
-                  href="https://github.com/Hiba7898"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                
-                  href="https://github.com/Hiba7898"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul> */}
-
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
@@ -446,7 +403,7 @@ function Home2() {
               </li>
             </ul>
 
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </Container>
