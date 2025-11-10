@@ -355,12 +355,12 @@ function Home2() {
           </Col>
 
           {/* Section des réseaux sociaux intégrée dans le même Row */}
-{/*           <Col md={12} className="home-about-social-icon">
+          <Col md={12} className="home-about-social">
             <h1>{t('FIND ME ON')}  </h1>
             <p>
                {t('Feel free to')}<span className="purple"> {t('connect')}</span> {t('with me')}
             </p>
-            <ul className="home-about-social-links">
+{/*             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
                   href="https://github.com/Hiba7898"
@@ -401,9 +401,9 @@ function Home2() {
                   <AiFillInstagram />
                 </a>
               </li>
-            </ul>
+            </ul> */}
 
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </Container>
