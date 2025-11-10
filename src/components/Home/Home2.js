@@ -211,6 +211,8 @@ function Home2() {
             </div>
           </Col>
         </Row> */}
+      </Container>
+      <Container>
         <Row>
           <Col md={12} className="home-about-social">
             <h1>{t('FIND ME ON')}  </h1>
