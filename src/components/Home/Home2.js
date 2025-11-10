@@ -296,12 +296,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/prgrm.png";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+// import {
+//   AiFillGithub,
+//   AiOutlineTwitter,
+//   AiFillInstagram,
+// } from "react-icons/ai";
+// import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 function Home2() {
