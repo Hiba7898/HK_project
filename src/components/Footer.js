@@ -36,7 +36,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            {/* <li className="social-icons">
               <a
                 href="https://github.com/Hiba7898"
                 style={{ color: "white" }}
@@ -45,10 +45,10 @@ function Footer() {
               >
                 <AiOutlineTwitter />
               </a>
-            </li>
+            </li> */}
             <li className="social-icons">
               <a
-                href="https://github.com/Hiba7898"
+                href="https://www.linkedin.com/in/hiba-kandaoui-432890260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -58,7 +58,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://github.com/Hiba7898"
+                href="https://www.instagram.com/mindevstudio?igsh=MXRodzV1OGdvN3E3Zw%3D%3D&utm_source=qr"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
