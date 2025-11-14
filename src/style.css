@@ -157,7 +157,7 @@ button:focus {
 /* Responsive Design for Buttons */
 @media (max-width: 767px) {
   .home-buttons-container {
-    padding: 20px 20px !important;
+    padding: 50px 50px !important;
     justify-content: center !important;
     text-align: center;
   }
@@ -2807,3 +2807,23 @@ button:focus {
 
 
 
+/* ===== About Card Text Alignment Fix ===== */
+.about-card-text {
+  text-align: justify;
+}
+
+/* Fix text alignment and spacing on mobile devices */
+@media (max-width: 768px) {
+  .about-card-text {
+    text-align: left !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card-text {
+    text-align: left !important;
+    line-height: 1.8 !important;
+  }
+}
