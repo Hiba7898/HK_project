@@ -759,7 +759,7 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 70px !important;
   padding-bottom: 30px !important;
   background: linear-gradient(135deg, #0c0513 0%, #1a0e2e 25%, #2d1950 50%, #16213e 75%, #0c0c0c 100%);
   color: white !important;
