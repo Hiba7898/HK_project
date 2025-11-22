@@ -1,8 +1,13 @@
+
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/prgrm.png";
 import Tilt from "react-parallax-tilt";
-
+import {
+  AiFillGithub,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 function Home2() {
@@ -61,35 +66,36 @@ function Home2() {
             <p>
                {t('Feel free to')}<span className="purple"> {t('connect')}</span> {t('with me')}
             </p>
+                        {/* Social Media Icons */}
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/your-username"
+                  href="https://github.com/YOUR_GITHUB_USERNAME"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <i className="fab fa-github"></i>
+                  <AiFillGithub />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/your-username"
+                  href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <i className="fab fa-linkedin-in"></i>
+                  <FaLinkedinIn />
                 </a>
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/your-username"
+                  href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
                 >
-                  <i className="fab fa-instagram"></i>
+                  <AiFillInstagram />
                 </a>
               </li>
             </ul>
