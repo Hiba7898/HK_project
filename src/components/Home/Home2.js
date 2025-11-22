@@ -67,10 +67,10 @@ function Home2() {
                {t('Feel free to')}<span className="purple"> {t('connect')}</span> {t('with me')}
             </p>
                         {/* Social Media Icons */}
-            <ul className="home-about-social-links">
-              <li className="social-icons">
+            <ul className="home2-about-social-links">
+              <li className="social-icons2">
                 <a
-                  href="https://github.com/YOUR_GITHUB_USERNAME"
+                  href="https://github.com/Hiba7898"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
@@ -78,9 +78,9 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
+              <li className="social-icons2">
                 <a
-                  href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/"
+                  href="https://www.linkedin.com/in/hiba-kandaoui-432890260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
@@ -88,9 +88,9 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social-icons">
+              <li className="social-icons2">
                 <a
-                  href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/"
+                  href="https://www.instagram.com/mindevstudio?igsh=MXRodzV1OGdvN3E3Zw%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
