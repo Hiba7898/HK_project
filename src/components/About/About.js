@@ -6,6 +6,7 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/web_design.png";
 import Toolstack from "./Toolstack";
+import Parcours from "./Parcours";
 import { useTranslation } from 'react-i18next';
 
 function About() {
@@ -36,6 +37,8 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
+        <Parcours />
+
         <h1 className="project-heading">
            {t('Professional')}<strong className="purple"> {t('Skillset')} </strong>
         </h1>
@@ -43,7 +46,7 @@ function About() {
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">{t('Tools')}</strong>{t('I use')} 
+          <strong className="purple">{t('Tools')}</strong>{t('I use')}
         </h1>
         <Toolstack />
 

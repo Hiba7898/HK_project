@@ -3,11 +3,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/prgrm.png";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 function Home2() {
@@ -18,7 +13,7 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-               {t('LET ME')}<span className="purple"> {t('INTRODUCE')} </span> {t('MYSELF')} 
+               {t('LET ME')}<span className="purple"> {t('INTRODUCE')} </span> {t('MYSELF')}
             </h1>
             <p className="home-about-body">
               <i>
@@ -30,27 +25,27 @@ function Home2() {
               <br />
               {t('dv web2')}  &nbsp;
               <i>
-                <b className="purple">{t('dv web3')}  </b>  {t('dv web4')} 
-                
+                <b className="purple">{t('dv web3')}  </b>  {t('dv web4')}
+
               </i>
               <br />
               <br />
-               {t('dv web5')} 
-                <b className="purple">{t('dv web6')} </b> 
-                {t('dv web7')} 
-              <i> 
+               {t('dv web5')}
+                <b className="purple">{t('dv web6')} </b>
+                {t('dv web7')}
+              <i>
                 <b className="purple">
                   {" "}
-                  {t('dv web8')} 
+                  {t('dv web8')}
                 </b>
-                 
-              </i> {t('dv web9')} 
-              &nbsp;{t('dv web10')}    
+
+              </i> {t('dv web9')}
+              &nbsp;{t('dv web10')}
               <b className="purple">
                   {" "}
-                  {t('dv web11')}  
-                </b> 
-                {t('dv web12')}  
+                  {t('dv web11')}
+                </b>
+                {t('dv web12')}
             </p>
           </Col>
 
@@ -58,47 +53,6 @@ function Home2() {
             <Tilt>
               <img src={myImg} style={{borderRadius: "200px"}} className="img-fluid" alt="avatar" />
             </Tilt>
-          </Col>
-
-          {/* Section des réseaux sociaux intégrée dans le même Row */}
-          <Col md={12} className="home-about-social">
-            <h1>{t('FIND ME ON')}  </h1>
-            <p>
-               {t('Feel free to')}<span className="purple"> {t('connect')}</span> {t('with me')}
-            </p>
-                        {/* Social Media Icons */}
-            <ul className="home2-about-social-links">
-              <li className="social-icons2">
-                <a
-                  href="https://github.com/Hiba7898"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons2">
-                <a
-                  href="https://www.linkedin.com/in/hiba-kandaoui-432890260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons2">
-                <a
-                  href="https://www.instagram.com/mindevstudio?igsh=MXRodzV1OGdvN3E3Zw%3D%3D&utm_source=qr"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
           </Col>
         </Row>
       </Container>

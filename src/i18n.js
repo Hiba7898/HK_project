@@ -43,6 +43,14 @@ i18n
           "Feel free to": "Feel free to",
           "connect" : "connect",
           "with me" : "with me ",
+
+          // CTA Section
+          "cta_title1": "Got a project in mind?",
+          "cta_title2": "Let's build it together.",
+          "cta_sub": "Whether it's a web app, SAP integration, ERP system, or a custom internal tool — I'm ready to help you build it.",
+          "cta_email_btn": "Send an Email",
+          "cta_wa_btn": "Chat on WhatsApp",
+          "cta_available": "Available for Freelance & Full-Time · Casablanca, Morocco",
           "Developed by Hiba kandaoui":"Developed by Hiba kandaoui",
           "kandaoui":"by Hiba Kandaoui for a better web ",
           "Know Who" : "Greetings! 👋",
@@ -125,58 +133,165 @@ i18n
           "game_desc4": "User-Friendly Interface: The game boasts a clean and intuitive design, ensuring a seamless experience for players of all ages.",
           "game_desc5": "Responsive Design: Optimized for both desktop and mobile devices, allowing players to enjoy the game on various platforms.",
           "game_desc6": "Whether you're looking to challenge your memory, learn about Moroccan culture, or simply have fun, the Moroccan Memory Game offers an engaging experience for everyone.",
-          
+
+          // Projects page labels
+          "projects_personal_title": "Personal",
+          "projects_personal_title2": "Projects",
+          "projects_case_title": "Professional",
+          "projects_case_title2": "Case Studies",
+          "projects_case_sub": "Real-world systems built for companies — private & confidential.",
+          "projects_portfolio_title": "Portfolio",
+          "projects_portfolio_title2": "Samples",
+          "projects_portfolio_sub": "Concept & template designs available on request.",
+          "projects_label_private": "Private Project",
+          "projects_label_demo": "Concept",
+          "projects_label_problem": "The Challenge",
+          "projects_label_solution": "The Solution",
+          "projects_label_features": "Key Features",
+          "projects_label_result": "The Result",
+
+          // Case Study badges & CTA
+          "cs_cta_contact": "Contact me",
+          "cs_cta_demo": "Request Demo",
+          "cs_cta_details": "Get Details",
+          "cs_private_note": "Confidential — details on request",
+
+          // Case Study 1 — Pointage System
+          "cs1_badge": "ERP · HR",
+          "cs1_impact": "3h+ saved per week · Zero payroll errors",
+          "cs1_title": "Employee Time Tracking System",
+          "cs1_tech": "React · Node.js · Express · SQL Server",
+          "cs1_problem": "The company tracked employee attendance manually on paper, causing errors in payroll calculation, no visibility on overtime, and impossible shift management.",
+          "cs1_solution": "A complete web application for automatic time tracking with clock-in/out, real-time overtime calculation, and period-based reporting.",
+          "cs1_f1": "Employee clock-in / clock-out with timestamp",
+          "cs1_f2": "Automatic overtime calculation per employee",
+          "cs1_f3": "Shift management (morning / afternoon / night)",
+          "cs1_f4": "Reports by period, department, or employee",
+          "cs1_f5": "Role-based access (Admin / Manager / Employee)",
+          "cs1_result": "100% elimination of manual payroll errors. HR saves 3+ hours per week. Full audit trail for every employee.",
+
+          // Case Study 2 — SAP Car Stock App
+          "cs2_badge": "SAP B1 · Automotive",
+          "cs2_impact": "Stock check: 5 min → 5 sec · 100% team adoption",
+          "cs2_title": "Vehicle Stock Application (SAP B1)",
+          "cs2_tech": "React · SAP Service Layer · Node.js · SQL Server",
+          "cs2_problem": "The sales team had no real-time view of vehicle stock. They had to call the warehouse or navigate complex SAP screens — slow, frustrating, and error-prone.",
+          "cs2_solution": "A web application that fetches live data from SAP Business One via Service Layer and displays it in a clean, fast, filterable interface tailored for the sales team.",
+          "cs2_f1": "Real-time stock sync from SAP Business One",
+          "cs2_f2": "Filter by warehouse, type (new/used), make, model, year",
+          "cs2_f3": "Fast full-text search across all vehicle fields",
+          "cs2_f4": "Detailed vehicle sheet with SAP-linked data",
+          "cs2_f5": "Mobile-friendly — works on phones in the showroom",
+          "cs2_result": "Stock check time dropped from 5 minutes to 5 seconds. Zero warehouse calls needed. Sales team adoption: 100% in week one.",
+
+          // Case Study 3 — Palettes Tracking
+          "cs3_badge": "SAP B1 · Logistics",
+          "cs3_impact": "−70% palette losses · Full audit trail",
+          "cs3_title": "Palette Tracking System (SAP Integration)",
+          "cs3_tech": "React · SAP DI API · Node.js · SQL Server",
+          "cs3_problem": "Palettes moved between warehouses with no digital traceability — frequent losses, counting errors, and no audit history for compliance.",
+          "cs3_solution": "A web system that creates digital palette records, links them to SAP entries, and tracks every movement with a complete audit trail.",
+          "cs3_f1": "Palette creation with auto-generated QR/barcode",
+          "cs3_f2": "Full SAP Business One integration via DI API",
+          "cs3_f3": "Real-time movement tracking between warehouses",
+          "cs3_f4": "Audit trail — who moved what, when, and where",
+          "cs3_f5": "Status reports and loss detection alerts",
+          "cs3_result": "70% reduction in palette losses. Full traceability for audits. End-to-end operations visible from a single dashboard.",
+
+          // Portfolio Sample 1 — Restaurant Website
+          "ps1_badge": "Web Design · Mobile-first",
+          "ps1_tagline": "Designed for conversion",
+          "ps1_title": "Restaurant Website — Concept",
+          "ps1_tech": "React · Node.js · CSS Animations",
+          "ps1_desc": "A modern, animated restaurant website concept featuring an interactive menu, online reservation form, photo gallery, and Google Maps integration. Designed for conversion — every section guides the visitor toward booking a table.",
+          "ps1_f1": "Interactive menu with category filters",
+          "ps1_f2": "Online reservation form with email notification",
+          "ps1_f3": "Photo gallery with lightbox",
+          "ps1_f4": "Fully responsive — optimized for mobile ordering",
+
+          // Portfolio Sample 2 — Business Dashboard
+          "ps2_badge": "Analytics · SaaS",
+          "ps2_tagline": "Real-time · Role-based",
+          "ps2_title": "Business Analytics Dashboard — Concept",
+          "ps2_tech": "React · Chart.js · REST API · SQL Server",
+          "ps2_desc": "A business intelligence dashboard concept for SMEs — real-time KPIs, interactive charts, and table views connected to a live database. Dark/light mode, role-based access, and CSV export included.",
+          "ps2_f1": "Real-time KPI cards (revenue, orders, clients)",
+          "ps2_f2": "Interactive line, bar, and pie charts",
+          "ps2_f3": "Filterable data tables with CSV export",
+          "ps2_f4": "Dark / light mode — role-based access",
+
+          // Why Choose Me
+          "wcm_title": "Why",
+          "wcm_title2": "Choose Me",
+          "wcm_sub": "What makes the difference when you work with me.",
+          "wcm1_title": "Real Company Experience",
+          "wcm1_desc": "I've built production systems for real companies — not just tutorials or academic exercises. Every project I mention ran in a real business environment.",
+          "wcm2_title": "Rare Specialization: Web + SAP",
+          "wcm2_desc": "Very few developers combine full-stack web development with SAP Business One expertise (Service Layer, DI API, UDO). I'm one of them.",
+          "wcm3_title": "Business-Focused, Not Just Code",
+          "wcm3_desc": "I understand business processes, not just technology. I ask the right questions and build solutions that solve real operational problems.",
+          "wcm4_title": "Moroccan Market Experience",
+          "wcm4_desc": "I've worked with Moroccan companies and understand local business practices, compliance requirements, and how teams actually operate on the ground.",
+          "wcm5_title": "Full-Stack = One Partner",
+          "wcm5_desc": "I handle front-end, back-end, database, and integrations. You get a complete solution from one person — no coordination overhead.",
+
+          // Parcours Section
+          "parcours_label": "04 — Parcours",
+          "parcours_heading1": "Une",
+          "parcours_heading2": "trajectoire",
+          "parcours_heading3": "technique.",
+          "parcours_p1_period": "Juillet 2024 — Présent",
+          "parcours_p1_title": "Développeuse Full-Stack",
+          "parcours_p1_company": "BPS Maroc · Casablanca",
+          "parcours_p1_desc": "Conception et développement d'applications web métier intégrées à SAP Business One pour des clients industriels marocains. Implémentation de modules ERP complets, intégrations Service Layer & DI API, support technique sur SAP B1.",
+          "parcours_p2_period": "Juin 2023 — Juillet 2023",
+          "parcours_p2_title": "Développeuse Web (Stage)",
+          "parcours_p2_company": "BPS Maroc · Casablanca",
+          "parcours_p2_desc": "Participation au développement d'applications web en équipe, première immersion dans les workflows SAP Business One.",
+          "parcours_p3_period": "Avril 2023 — Juillet 2023",
+          "parcours_p3_title": "Développeuse Web (Stage)",
+          "parcours_p3_company": "Forsoft Panorama · Sidi Maarouf",
+          "parcours_p3_desc": "Conception et livraison complète d'un site web institutionnel en un mois. Tests d'application et installation de la suite Sage (Commercial, Comptabilité, Gestion) avec SQL Server chez les clients.",
+          "parcours_p4_period": "Sept. 2021 — Août 2023",
+          "parcours_p4_title": "Technicien Spécialisé — Développement Digital",
+          "parcours_p4_company": "ISTA NTIC (CFMOTI) · Casa Nearshore",
+          "parcours_p4_desc": "Formation en développement web full-stack. Certifications complémentaires : Python (Cisco & OpenEDG), PHP (SoloLearn).",
+
           // Services Section
-          "Our Main": "Our Main",
-          "Services": "Services",
-          
-          // Service 1 - Showcase Website
-          "service1_title": "Showcase Website",
-          "service1_desc": "Creation of elegant and professional websites to showcase your business or brand with modern and responsive design.",
-          "service1_feat1": "Responsive and mobile-first design",
-          "service1_feat2": "Integrated SEO optimization",
-          "service1_feat3": "Modern user interface",
-          "service1_feat4": "Optimized performance",
-          
-          // Service 2 - E-Commerce
-          "service2_title": "E-commerce Website",
-          "service2_desc": "Development of complete online stores with product management, secure payments and admin dashboard.",
-          "service2_feat1": "Advanced product catalog",
-          "service2_feat2": "Payment gateway integration",
-          "service2_feat3": "Order and stock management",
-          "service2_feat4": "Admin panel",
-          
-          // Service 3 - Front-End Development
-          "service3_title": "Front-End Development",
-          "service3_desc": "Creating interactive and responsive user interfaces with the latest modern web technologies.",
-          "service3_feat1": "HTML5, CSS3, JavaScript ES6+",
-          "service3_feat2": "React.js, Vue.js, Angular",
-          "service3_feat3": "Dynamic animations and effects",
-          "service3_feat4": "Accessibility and optimized UX",
-          
-          // Service 4 - Back-End Development
-          "service4_title": "Back-End Development",
-          "service4_desc": "Development of robust server-side applications with databases and secure APIs.",
-          "service4_feat1": "Node.js, Express.js, PHP, Laravel",
-          "service4_feat2": "SQL/NoSQL databases",
-          "service4_feat3": "REST APIs and GraphQL",
-          "service4_feat4": "Authentication and security",
-          
-          // Service 5 - Full-Stack Development
-          "service5_title": "Full-Stack Development",
-          "service5_desc": "Complete end-to-end solutions, from front-end to back-end, with deployment on cloud platforms.",
-          "service5_feat1": "Complete web applications",
-          "service5_feat2": "Front-end/back-end integration",
-          "service5_feat3": "Cloud deployment (AWS, Vercel, Netlify)",
-          "service5_feat4": "Scalable architecture",
-          
-          // Service 6 - Optimization & Maintenance
-          "service6_title": "Optimization & Maintenance",
-          "service6_desc": "Performance improvement, bug fixes and updates to modern standards.",
-          "service6_feat1": "Performance optimization",
-          "service6_feat2": "SEO improvement",
-          "service6_feat3": "Bug fixing",
-          "service6_feat4": "Code refactoring"
+          "svc_section_title": "What I Can Build",
+          "svc_section_title2": "For You",
+          "svc_section_sub": "Tailored web solutions for businesses that need more than a simple website.",
+          "svc_benefit_label": "Why you need it",
+
+          // Service 1 - Business Web Apps
+          "svc1_title": "Business Web Application Development",
+          "svc1_desc": "Custom web applications designed to automate your workflows, manage your data, and grow with your business — built from scratch around your real needs.",
+          "svc1_benefit": "Save hours of manual work and reduce costly errors. Your team focuses on what matters — not on repetitive tasks.",
+          "svc1_tech": "React · Node.js · Laravel · SQL Server",
+
+          // Service 2 - SAP Integration
+          "svc2_title": "SAP Business One Integration",
+          "svc2_desc": "Connect your websites and external tools directly to SAP B1 using Service Layer, DI API, and UDO — real-time, two-way data synchronization.",
+          "svc2_benefit": "Eliminate double data entry and manual exports. One single source of truth for your entire operation.",
+          "svc2_tech": "SAP Service Layer · DI API · UDO · REST API",
+
+          // Service 3 - ERP Development
+          "svc3_title": "ERP System Development",
+          "svc3_desc": "End-to-end ERP systems built around your company's actual processes — not a generic off-the-shelf template.",
+          "svc3_benefit": "Full control over inventory, HR, finance and operations in one unified system built specifically for you.",
+          "svc3_tech": "Node.js · SQL Server · React · REST API",
+
+          // Service 4 - Dashboards & Reports
+          "svc4_title": "Dashboards & Reports",
+          "svc4_desc": "Real-time visual dashboards and automated reports that transform your raw data into clear, actionable business insights.",
+          "svc4_benefit": "Make faster, smarter decisions without waiting for manual reports or digging through spreadsheets.",
+          "svc4_tech": "React · SQL Server · Chart.js · REST API",
+
+          // Service 5 - Internal Tools
+          "svc5_title": "Custom Internal Tools",
+          "svc5_desc": "Tailored tools built for your team's specific needs — time-tracking systems, leave management, approval workflows, and more.",
+          "svc5_benefit": "Tools that fit exactly how your team works — not the other way around. Zero unnecessary features, zero bloat.",
+          "svc5_tech": "React · Node.js · Laravel · MySQL"
         }
       },
       fr: {
@@ -213,6 +328,14 @@ i18n
           "Feel free to": "N'hésitez pas à",
           "connect":"vous connecter ",
           "with me": "avec moi ",
+
+          // CTA Section
+          "cta_title1": "Vous avez un projet ?",
+          "cta_title2": "Travaillons ensemble.",
+          "cta_sub": "Application web, intégration SAP, système ERP ou outil interne — je suis disponible pour vous aider à le concrétiser.",
+          "cta_email_btn": "Envoyer un Email",
+          "cta_wa_btn": "Écrire sur WhatsApp",
+          "cta_available": "Disponible en Freelance & CDI · Casablanca, Maroc",
           "Developed by Hiba kandaoui":"Développé par Hiba kandaoui",
           "kandaoui": "par Hiba Kandaoui pour un meilleur web",
           "Know Who" : "Salutations! 👋",
@@ -297,58 +420,165 @@ i18n
           "game_desc4": "Interface Conviviale : Le jeu dispose d'un design propre et intuitif, garantissant une expérience fluide pour les joueurs de tous âges.",
           "game_desc5": "Design Réactif : Optimisé pour les appareils de bureau et mobiles, permettant aux joueurs de profiter du jeu sur diverses plateformes.",
           "game_desc6": "Que vous cherchiez à défier votre mémoire, à découvrir la culture marocaine ou simplement à vous amuser, le Jeu de Mémoire Marocain offre une expérience engageante pour tous.",
-          
+
+          // Projects page labels - French
+          "projects_personal_title": "Projets",
+          "projects_personal_title2": "Personnels",
+          "projects_case_title": "Études de Cas",
+          "projects_case_title2": "Professionnelles",
+          "projects_case_sub": "Systèmes réels construits pour des entreprises — privés et confidentiels.",
+          "projects_portfolio_title": "Exemples de",
+          "projects_portfolio_title2": "Portfolio",
+          "projects_portfolio_sub": "Concepts et designs de templates disponibles sur demande.",
+          "projects_label_private": "Projet Privé",
+          "projects_label_demo": "Concept",
+          "projects_label_problem": "Le Problème",
+          "projects_label_solution": "La Solution",
+          "projects_label_features": "Fonctionnalités Clés",
+          "projects_label_result": "Le Résultat",
+
+          // Case Study badges & CTA - French
+          "cs_cta_contact": "Me contacter",
+          "cs_cta_demo": "Demander une démo",
+          "cs_cta_details": "Voir les détails",
+          "cs_private_note": "Confidentiel — détails sur demande",
+
+          // Case Study 1 — Système de Pointage
+          "cs1_badge": "ERP · RH",
+          "cs1_impact": "3h+ économisées / semaine · Zéro erreur de paie",
+          "cs1_title": "Système de Suivi des Présences (Pointage)",
+          "cs1_tech": "React · Node.js · Express · SQL Server",
+          "cs1_problem": "L'entreprise gérait les présences manuellement sur papier, causant des erreurs de paie, aucune visibilité sur les heures supplémentaires, et une gestion des shifts impossible.",
+          "cs1_solution": "Une application web complète pour le suivi automatique du temps de travail avec pointage, calcul des heures supplémentaires en temps réel et rapports par période.",
+          "cs1_f1": "Pointage entrée / sortie avec horodatage",
+          "cs1_f2": "Calcul automatique des heures supplémentaires",
+          "cs1_f3": "Gestion des shifts (matin / après-midi / nuit)",
+          "cs1_f4": "Rapports par période, département ou employé",
+          "cs1_f5": "Accès par rôle (Admin / Manager / Employé)",
+          "cs1_result": "Élimination à 100% des erreurs de calcul de paie. Les RH gagnent 3h+ par semaine. Traçabilité complète pour chaque employé.",
+
+          // Case Study 2 — Application Stock Véhicules SAP
+          "cs2_badge": "SAP B1 · Automobile",
+          "cs2_impact": "Stock: 5 min → 5 sec · Adoption 100% équipe",
+          "cs2_title": "Application Stock Véhicules (SAP B1)",
+          "cs2_tech": "React · SAP Service Layer · Node.js · SQL Server",
+          "cs2_problem": "L'équipe commerciale n'avait aucune visibilité en temps réel sur le stock de véhicules. Elle devait appeler l'entrepôt ou naviguer dans SAP — lent, complexe et source d'erreurs.",
+          "cs2_solution": "Une application web qui récupère les données en direct depuis SAP Business One via Service Layer et les affiche dans une interface claire et filtrée, conçue pour les commerciaux.",
+          "cs2_f1": "Synchronisation en temps réel depuis SAP Business One",
+          "cs2_f2": "Filtres par entrepôt, type (neuf/occasion), marque, modèle",
+          "cs2_f3": "Recherche rapide sur tous les champs véhicule",
+          "cs2_f4": "Fiche détaillée véhicule avec données SAP",
+          "cs2_f5": "Mobile-friendly — utilisable en salle d'exposition",
+          "cs2_result": "Vérification du stock en 5 secondes au lieu de 5 minutes. Zéro appel à l'entrepôt. Adoption à 100% par l'équipe dès la première semaine.",
+
+          // Case Study 3 — Suivi de Palettes
+          "cs3_badge": "SAP B1 · Logistique",
+          "cs3_impact": "−70% pertes · Traçabilité complète pour audits",
+          "cs3_title": "Système de Suivi des Palettes (Intégration SAP)",
+          "cs3_tech": "React · SAP DI API · Node.js · SQL Server",
+          "cs3_problem": "Les palettes circulaient entre entrepôts sans traçabilité digitale — pertes fréquentes, erreurs de comptage et aucun historique pour les audits de conformité.",
+          "cs3_solution": "Un système web qui crée des fiches digitales de palettes, les lie à SAP et trace chaque mouvement avec un journal d'audit complet.",
+          "cs3_f1": "Création de palette avec QR code / code-barres auto-généré",
+          "cs3_f2": "Intégration complète SAP Business One via DI API",
+          "cs3_f3": "Suivi des mouvements entre entrepôts en temps réel",
+          "cs3_f4": "Journal d'audit — qui a bougé quoi, quand et où",
+          "cs3_f5": "Rapports de statut et alertes de détection de pertes",
+          "cs3_result": "Réduction de 70% des pertes de palettes. Traçabilité complète pour les audits. Toutes les opérations visibles depuis un tableau de bord unique.",
+
+          // Portfolio Sample 1 — Site Restaurant
+          "ps1_badge": "Web Design · Mobile-first",
+          "ps1_tagline": "Conçu pour convertir",
+          "ps1_title": "Site Web Restaurant — Concept",
+          "ps1_tech": "React · Node.js · CSS Animations",
+          "ps1_desc": "Un concept de site web restaurant moderne et animé avec menu interactif, formulaire de réservation en ligne, galerie photos et intégration Google Maps. Conçu pour convertir — chaque section guide le visiteur vers la réservation.",
+          "ps1_f1": "Menu interactif avec filtres par catégorie",
+          "ps1_f2": "Formulaire de réservation avec notification email",
+          "ps1_f3": "Galerie photos avec lightbox",
+          "ps1_f4": "Entièrement responsive — optimisé pour mobile",
+
+          // Portfolio Sample 2 — Dashboard Business
+          "ps2_badge": "Analytics · SaaS",
+          "ps2_tagline": "Temps réel · Accès par rôle",
+          "ps2_title": "Dashboard Analytics Métier — Concept",
+          "ps2_tech": "React · Chart.js · REST API · SQL Server",
+          "ps2_desc": "Un concept de tableau de bord BI pour PME — KPIs en temps réel, graphiques interactifs et tableaux connectés à une base de données live. Mode sombre/clair, accès par rôle et export CSV inclus.",
+          "ps2_f1": "Cartes KPI en temps réel (CA, commandes, clients)",
+          "ps2_f2": "Graphiques interactifs (courbes, barres, camemberts)",
+          "ps2_f3": "Tableaux filtrables avec export CSV",
+          "ps2_f4": "Mode sombre / clair — accès par rôle",
+
+          // Why Choose Me - French
+          "wcm_title": "Pourquoi",
+          "wcm_title2": "me choisir ?",
+          "wcm_sub": "Ce qui fait la différence quand vous travaillez avec moi.",
+          "wcm1_title": "Expérience en Entreprise Réelle",
+          "wcm1_desc": "J'ai construit des systèmes en production pour de vraies entreprises — pas seulement des tutoriels ou des exercices académiques. Chaque projet mentionné a fonctionné dans un vrai contexte métier.",
+          "wcm2_title": "Spécialisation Rare : Web + SAP",
+          "wcm2_desc": "Très peu de développeurs combinent le développement web full-stack avec l'expertise SAP Business One (Service Layer, DI API, UDO). J'en fais partie.",
+          "wcm3_title": "Orientée Solutions Métier",
+          "wcm3_desc": "Je comprends les processus métier, pas seulement la technologie. Je pose les bonnes questions et construis des solutions qui résolvent de vrais problèmes opérationnels.",
+          "wcm4_title": "Expérience Marché Marocain",
+          "wcm4_desc": "J'ai travaillé avec des entreprises marocaines et je comprends les pratiques locales, les exigences de conformité et le fonctionnement réel des équipes sur le terrain.",
+          "wcm5_title": "Full-Stack = Un Seul Interlocuteur",
+          "wcm5_desc": "Je gère le front-end, le back-end, la base de données et les intégrations. Vous obtenez une solution complète avec une seule personne — zéro coordination supplémentaire.",
+
+          // Parcours Section - French
+          "parcours_label": "04 — Parcours",
+          "parcours_heading1": "Une",
+          "parcours_heading2": "trajectoire",
+          "parcours_heading3": "technique.",
+          "parcours_p1_period": "Juillet 2024 — Présent",
+          "parcours_p1_title": "Développeuse Full-Stack",
+          "parcours_p1_company": "BPS Maroc · Casablanca",
+          "parcours_p1_desc": "Conception et développement d'applications web métier intégrées à SAP Business One pour des clients industriels marocains. Implémentation de modules ERP complets, intégrations Service Layer & DI API, support technique sur SAP B1.",
+          "parcours_p2_period": "Juin 2023 — Juillet 2023",
+          "parcours_p2_title": "Développeuse Web (Stage)",
+          "parcours_p2_company": "BPS Maroc · Casablanca",
+          "parcours_p2_desc": "Participation au développement d'applications web en équipe, première immersion dans les workflows SAP Business One.",
+          "parcours_p3_period": "Avril 2023 — Juillet 2023",
+          "parcours_p3_title": "Développeuse Web (Stage)",
+          "parcours_p3_company": "Forsoft Panorama · Sidi Maarouf",
+          "parcours_p3_desc": "Conception et livraison complète d'un site web institutionnel en un mois. Tests d'application et installation de la suite Sage (Commercial, Comptabilité, Gestion) avec SQL Server chez les clients.",
+          "parcours_p4_period": "Sept. 2021 — Août 2023",
+          "parcours_p4_title": "Technicien Spécialisé — Développement Digital",
+          "parcours_p4_company": "ISTA NTIC (CFMOTI) · Casa Nearshore",
+          "parcours_p4_desc": "Formation en développement web full-stack. Certifications complémentaires : Python (Cisco & OpenEDG), PHP (SoloLearn).",
+
           // Services Section - French
-          "Our Main": "Nos",
-          "Services": "Services Principaux",
-          
-          // Service 1 - Site Web Vitrine
-          "service1_title": "Site Web Vitrine", 
-          "service1_desc": "Création de sites web élégants et professionnels pour présenter votre entreprise ou votre marque avec un design moderne et responsive.",
-          "service1_feat1": "Design responsive et mobile-first",
-          "service1_feat2": "Optimisation SEO intégrée",
-          "service1_feat3": "Interface utilisateur moderne",
-          "service1_feat4": "Performance optimisée",
-          
-          // Service 2 - E-Commerce
-          "service2_title": "Site E-commerce",
-          "service2_desc": "Développement de boutiques en ligne complètes avec gestion des produits, paiements sécurisés et tableau de bord administrateur.",
-          "service2_feat1": "Catalogue produits avancé",
-          "service2_feat2": "Intégration passerelles de paiement",
-          "service2_feat3": "Gestion des commandes et stock",
-          "service2_feat4": "Panneau d'administration",
-          
-          // Service 3 - Développement Front-End
-          "service3_title": "Développement Front-End",
-          "service3_desc": "Création d'interfaces utilisateur interactives et responsives avec les dernières technologies web modernes.",
-          "service3_feat1": "HTML5, CSS3, JavaScript ES6+",
-          "service3_feat2": "React.js, Vue.js, Angular",
-          "service3_feat3": "Animations et effets dynamiques",
-          "service3_feat4": "Accessibilité et UX optimisée",
-          
-          // Service 4 - Développement Back-End
-          "service4_title": "Développement Back-End",
-          "service4_desc": "Développement d'applications côté serveur robustes avec bases de données et APIs sécurisées.",
-          "service4_feat1": "Node.js, Express.js, PHP, Laravel",
-          "service4_feat2": "Bases de données SQL/NoSQL",
-          "service4_feat3": "APIs REST et GraphQL",
-          "service4_feat4": "Authentification et sécurité",
-          
-          // Service 5 - Développement Full-Stack
-          "service5_title": "Développement Full-Stack",
-          "service5_desc": "Solutions complètes de A à Z, du front-end au back-end, avec déploiement sur plateformes cloud.",
-          "service5_feat1": "Applications web complètes",
-          "service5_feat2": "Intégration front-end/back-end",
-          "service5_feat3": "Déploiement cloud (AWS, Vercel, Netlify)",
-          "service5_feat4": "Architecture scalable",
-          
-          // Service 6 - Optimisation & Maintenance
-          "service6_title": "Optimisation & Maintenance",
-          "service6_desc": "Amélioration des performances, correction de bugs et mise à jour vers les standards modernes.",
-          "service6_feat1": "Optimisation des performances",
-          "service6_feat2": "Amélioration SEO",
-          "service6_feat3": "Correction de bugs",
-          "service6_feat4": "Refactorisation de code"
+          "svc_section_title": "Ce que je peux",
+          "svc_section_title2": "créer pour vous",
+          "svc_section_sub": "Des solutions web sur mesure pour les entreprises qui ont besoin de plus qu'un simple site.",
+          "svc_benefit_label": "Pourquoi vous en avez besoin",
+
+          // Service 1 - Développement d'apps métier
+          "svc1_title": "Développement d'applications web métier",
+          "svc1_desc": "Applications web sur mesure pour automatiser vos workflows, gérer vos données et évoluer avec votre entreprise — construites autour de vos vrais besoins.",
+          "svc1_benefit": "Gagnez des heures de travail manuel et réduisez les erreurs coûteuses. Votre équipe se concentre sur ce qui compte.",
+          "svc1_tech": "React · Node.js · Laravel · SQL Server",
+
+          // Service 2 - Intégration SAP
+          "svc2_title": "Intégration SAP Business One",
+          "svc2_desc": "Connectez vos sites web et outils externes directement à SAP B1 via Service Layer, DI API et UDO — synchronisation bidirectionnelle en temps réel.",
+          "svc2_benefit": "Éliminez la double saisie et les exports manuels. Une seule source de vérité pour toute votre activité.",
+          "svc2_tech": "SAP Service Layer · DI API · UDO · REST API",
+
+          // Service 3 - Développement ERP
+          "svc3_title": "Développement de systèmes ERP",
+          "svc3_desc": "Systèmes ERP de bout en bout construits autour des vrais processus de votre entreprise — pas un modèle générique.",
+          "svc3_benefit": "Contrôle total sur les stocks, RH, finances et opérations dans un système unifié conçu pour vous.",
+          "svc3_tech": "Node.js · SQL Server · React · REST API",
+
+          // Service 4 - Dashboards et rapports
+          "svc4_title": "Dashboards & Rapports",
+          "svc4_desc": "Tableaux de bord visuels en temps réel et rapports automatisés qui transforment vos données brutes en insights clairs et actionnables.",
+          "svc4_benefit": "Prenez de meilleures décisions plus rapidement sans attendre des rapports manuels.",
+          "svc4_tech": "React · SQL Server · Chart.js · REST API",
+
+          // Service 5 - Outils internes
+          "svc5_title": "Outils internes sur mesure",
+          "svc5_desc": "Outils adaptés aux besoins spécifiques de votre équipe — pointage, congés, workflows d'approbation, et bien plus.",
+          "svc5_benefit": "Des outils qui s'adaptent exactement à votre façon de travailler — pas l'inverse.",
+          "svc5_tech": "React · Node.js · Laravel · MySQL"
         }
       },
     },

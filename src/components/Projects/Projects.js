@@ -1,10 +1,10 @@
 
 
 
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import CaseStudyCard from "./CaseStudyCard";
 import editor from "../../Assets/convertisseur_d'unités/1.png";
 import chatify from "../../Assets/tic-tac-toe/1.png";
 import bitsOfCode from "../../Assets/Pierre-Papier-Ciseaux/4.png";
@@ -123,15 +123,44 @@ ${t('game_desc5')}
 ${t('game_desc6')}`;
   };
 
+  /* Icons for case studies */
+  const IconClock = () => (
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+    </svg>
+  );
+  const IconCar = () => (
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+      <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5zm-8-4H8v2h3v-2zm6 0h-3v2h3v-2z"/>
+    </svg>
+  );
+  const IconBox = () => (
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+      <path d="M20 7l-8-4-8 4v10l8 4 8-4V7zm-8 11.54L5 15.09V8.46l7 3.5v6.58zm1-8.19L6.04 7 12 4.46 17.96 7 13 10.35zm7 5.74l-7 3.45V10.35l7-3.44v6.18z"/>
+    </svg>
+  );
+  const IconRestaurant = () => (
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+      <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+    </svg>
+  );
+  const IconDashboard = () => (
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+      <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+    </svg>
+  );
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
+
+        {/* ── Section 1: Personal Projects ── */}
         <h1 className="project-heading">
-          {t('My Recent')} <strong className="purple"> {t('Works')} </strong>
+          {t('projects_personal_title')} <strong className="purple"> {t('projects_personal_title2')} </strong>
         </h1>
         <p style={{ color: "white" }}>
-           {t("Here are a few projects I've worked on recently.")} 
+          {t("Here are a few projects I've worked on recently.")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           
@@ -208,6 +237,51 @@ ${t('game_desc6')}`;
           </Col>
 
         </Row>
+
+        {/* ── Section 2: Professional Case Studies ── */}
+        <div className="projects-section-divider" />
+        <h1 className="project-heading">
+          {t('projects_case_title')} <strong className="purple"> {t('projects_case_title2')} </strong>
+        </h1>
+        <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: "40px" }}>
+          {t("projects_case_sub")}
+        </p>
+        <Row style={{ justifyContent: "center", gap: "0" }}>
+
+          <Col md={6} lg={4} className="project-card">
+            <CaseStudyCard csKey="cs1" color="#c770f0" icon={<IconClock />} />
+          </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <CaseStudyCard csKey="cs2" color="#00b4d8" icon={<IconCar />} />
+          </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <CaseStudyCard csKey="cs3" color="#f4a261" icon={<IconBox />} />
+          </Col>
+
+        </Row>
+
+        {/* ── Section 3: Portfolio Samples ── */}
+        <div className="projects-section-divider" />
+        <h1 className="project-heading">
+          {t('projects_portfolio_title')} <strong className="purple"> {t('projects_portfolio_title2')} </strong>
+        </h1>
+        <p style={{ color: "rgba(255,255,255,0.6)", marginBottom: "40px" }}>
+          {t("projects_portfolio_sub")}
+        </p>
+        <Row style={{ justifyContent: "center" }}>
+
+          <Col md={6} lg={4} className="project-card">
+            <CaseStudyCard csKey="ps1" color="#2a9d8f" icon={<IconRestaurant />} isPortfolio />
+          </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <CaseStudyCard csKey="ps2" color="#e76f51" icon={<IconDashboard />} isPortfolio />
+          </Col>
+
+        </Row>
+
       </Container>
     </Container>
   );

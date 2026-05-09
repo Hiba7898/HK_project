@@ -1,10 +1,12 @@
-import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import homeLogo from "../../Assets/homeimg.png";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Services from "../Services/Services";
+import HomeCTA from "./HomeCTA";
+import WhyChooseMe from "./WhyChooseMe";
 import { useTranslation } from 'react-i18next';
 
 function Home() {
@@ -144,6 +146,9 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+      <Services />
+      <WhyChooseMe />
+      <HomeCTA />
     </section>
   );
 }
